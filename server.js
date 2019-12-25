@@ -48,10 +48,9 @@ function cleanData(lifecycle)
 fetchUrl('https://computing.cs.cmu.edu/desktop/os-lifecycle.html')
 .then(function(html)
 {
-  return convert(html, {useFirstRowForHeadings: true})
-  .then(function(lifecycles)
-  {
-    return JSON.stringify(lifecycles[1].slice(1).map(cleanData), null, 2)
-  })
-  .then(writeFile.bind(null, 'index.json'))
+  const lifecycles = convert(html, {useFirstRowForHeadings: true})
+
+  const data = JSON.stringify(lifecycles[1].slice(1).map(cleanData), null, 2)
+
+  writeFile('index.json', data)
 })
