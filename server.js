@@ -4,6 +4,7 @@ const {writeFile} = require('fs').promises
 
 const {load} = require('cheerio')
 const {AbstractToJson: {fetchUrl}} = require('pagetojson')
+const release = require('release-it')
 const {convert} = require('tabletojson')
 
 const {version} = require('./package.json')
@@ -50,14 +51,26 @@ function cleanData(lifecycle)
 fetchUrl('https://computing.cs.cmu.edu/desktop/os-lifecycle.html')
 .then(function(html)
 {
-  const sidedate = new Date(load(html)('p.sidedate').text().trim()
+  const increment = new Date(load(html)('p.sidedate').text().trim()
   .replace(/^As of: /, '')).toISOString().slice(0, 10).replace(/-/g, '.')
 
-  if(sidedate <= version) return
+  if(increment <= version) return
 
   const lifecycles = convert(html, {useFirstRowForHeadings: true})[1].slice(1)
 
   const cleanedData = lifecycles.map(cleanData)
 
   writeFile('index.json', JSON.stringify(cleanedData, null, 2))
+
+  const options =
+  {
+    ci: true,
+    git:
+    {
+      requireCleanWorkingDir: false
+    },
+    increment
+  }
+
+  return release(options)
 })
