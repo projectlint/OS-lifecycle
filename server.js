@@ -6,6 +6,8 @@ const {load} = require('cheerio')
 const {AbstractToJson: {fetchUrl}} = require('pagetojson')
 const {convert} = require('tabletojson')
 
+const {version} = require('./package.json')
+
 
 const REGEXP_ARCH = /^([ \S]+?)\s+(\d+)-bit$/
 const REGEXP_CODENAME = /^([ \S]+?)\s+"([ \S]*)"$/
@@ -48,6 +50,11 @@ function cleanData(lifecycle)
 fetchUrl('https://computing.cs.cmu.edu/desktop/os-lifecycle.html')
 .then(function(html)
 {
+  const sidedate = new Date(load(html)('p.sidedate').text().trim()
+  .replace(/^As of: /, '')).toISOString().slice(0, 10).replace(/-/g, '.')
+
+  if(sidedate <= version) return
+
   const lifecycles = convert(html, {useFirstRowForHeadings: true})
 
   const data = JSON.stringify(lifecycles[1].slice(1).map(cleanData), null, 2)
