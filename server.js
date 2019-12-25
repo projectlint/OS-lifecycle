@@ -55,9 +55,9 @@ fetchUrl('https://computing.cs.cmu.edu/desktop/os-lifecycle.html')
 
   if(sidedate <= version) return
 
-  const lifecycles = convert(html, {useFirstRowForHeadings: true})
+  const lifecycles = convert(html, {useFirstRowForHeadings: true})[1].slice(1)
 
-  const data = JSON.stringify(lifecycles[1].slice(1).map(cleanData), null, 2)
+  const cleanedData = lifecycles.map(cleanData)
 
-  writeFile('index.json', data)
+  writeFile('index.json', JSON.stringify(cleanedData, null, 2))
 })
