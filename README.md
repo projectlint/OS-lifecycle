@@ -1,2 +1,2 @@
 # OS-lifecycle
-Operating System Support Lifecycle
+Operating System support lifecycle

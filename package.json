@@ -1,0 +1,27 @@
+{
+  "name": "@projectlint/os-lifecycle",
+  "version": "0.0.0",
+  "description": "Operating System support lifecycle",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/projectlint/OS-lifecycle.git"
+  },
+  "author": "Jesús Leganés-Combarro 'piranna'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/projectlint/OS-lifecycle/issues"
+  },
+  "homepage": "https://github.com/projectlint/OS-lifecycle#readme",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "pagetojson": "0.0.8",
+    "tabletojson": "github:projectlint/tabletojson"
+  }
+}
