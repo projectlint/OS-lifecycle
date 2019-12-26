@@ -51,7 +51,6 @@ function cleanData(lifecycle)
 
 function parseDate(date)
 {
-  console.log(date, moment(date), moment(date).format('Y.M.D'))
   return moment(date, 'America/New_York')
 }
 
@@ -59,8 +58,8 @@ function parseDate(date)
 fetchUrl('https://computing.cs.cmu.edu/desktop/os-lifecycle.html')
 .then(function(html)
 {
-  const increment = parseDate(moment(load(html)('p.sidedate').text().trim()
-  .replace(/^As of: /, ''))).format('Y.M.D')
+  const date = load(html)('p.sidedate').text().trim().replace(/^As of: /, '')
+  const increment = parseDate(moment(date, 'D MMM Y')).format('Y.M.D')
 
   if(lte(increment, version)) return
 
