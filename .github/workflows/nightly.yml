@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+  schedule:
+  - cron: "0 0 * * *"
+
+jobs:
+  update:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install Dependencies
+      run: npm install
+    - name: Check data sources and update if needed
+      run: npm start
