@@ -1,13 +1,9 @@
 {
   "name": "@projectlint/os-lifecycle",
-  "version": "2019.12.15",
+  "version": "2019.12.16",
   "description": "Operating System support lifecycle",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -21,8 +17,10 @@
   "homepage": "https://github.com/projectlint/OS-lifecycle#readme",
   "devDependencies": {
     "cheerio": "^1.0.0-rc.3",
+    "moment-timezone": "^0.5.27",
     "pagetojson": "0.0.8",
     "release-it": "^12.4.3",
+    "semver": "^7.1.1",
     "tabletojson": "github:projectlint/tabletojson"
   }
 }

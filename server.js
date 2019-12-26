@@ -3,8 +3,10 @@
 const {writeFile} = require('fs').promises
 
 const {load} = require('cheerio')
+const moment = require('moment-timezone')
 const {AbstractToJson: {fetchUrl}} = require('pagetojson')
 const release = require('release-it')
+const {lte} = require('semver')
 const {convert} = require('tabletojson')
 
 const {version} = require('./package.json')
@@ -39,22 +41,28 @@ function cleanData(lifecycle)
   const latestVendorEolDate = lifecycle['Latest Vendor EOL Date']
   .replace(/^~/, '').replace(/see note$/, '')
 
-  lifecycle['Vendor Release Date'   ] = new Date(lifecycle['Vendor Release Date' ])
-  lifecycle['Start of SCS Support'  ] = new Date(lifecycle['Start of SCS Support'])
-  lifecycle['End of SCS Support'    ] = new Date(lifecycle['End of SCS Support'  ])
-  lifecycle['Latest Vendor EOL Date'] = new Date(latestVendorEolDate)
+  lifecycle['Vendor Release Date'   ] = parseDate(lifecycle['Vendor Release Date' ])
+  lifecycle['Start of SCS Support'  ] = parseDate(lifecycle['Start of SCS Support'])
+  lifecycle['End of SCS Support'    ] = parseDate(lifecycle['End of SCS Support'  ])
+  lifecycle['Latest Vendor EOL Date'] = parseDate(latestVendorEolDate)
 
   return lifecycle
+}
+
+function parseDate(date)
+{
+  console.log(date, moment(date), moment(date).format('Y.M.D'))
+  return moment(date, 'America/New_York')
 }
 
 
 fetchUrl('https://computing.cs.cmu.edu/desktop/os-lifecycle.html')
 .then(function(html)
 {
-  const increment = new Date(load(html)('p.sidedate').text().trim()
-  .replace(/^As of: /, '')).toISOString().slice(0, 10).replace(/-/g, '.')
+  const increment = parseDate(moment(load(html)('p.sidedate').text().trim()
+  .replace(/^As of: /, ''))).format('Y.M.D')
 
-  if(increment <= version) return
+  if(lte(increment, version)) return
 
   const lifecycles = convert(html, {useFirstRowForHeadings: true})[1].slice(1)
 
