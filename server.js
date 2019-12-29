@@ -3,7 +3,6 @@
 const {writeFile} = require('fs').promises
 
 const {load} = require('cheerio')
-const moment = require('moment-timezone')
 const {AbstractToJson: {fetchUrl}} = require('pagetojson')
 const release = require('release-it')
 const {lte} = require('semver')
@@ -14,6 +13,8 @@ const {version} = require('./package.json')
 
 const REGEXP_ARCH = /^([ \S]+?)\s+(\d+)-bit$/
 const REGEXP_CODENAME = /^([ \S]+?)\s+"([ \S]*)"$/
+const REGEXP_RFC_2822_DATE =
+  /^(?<day>\d{1,2})?\s*(?<month>[A-Z][a-z]{2})?\s*(?<year>\d{4})$/
 
 
 function cleanData(lifecycle)
@@ -51,7 +52,34 @@ function cleanData(lifecycle)
 
 function parseDate(date)
 {
-  return moment(date, 'America/New_York')
+  date = REGEXP_RFC_2822_DATE.exec(date)
+  if(date === null) return
+
+  const {day, month, year} = date.groups
+
+  let result = year
+
+  switch (month)
+  {
+    case 'Jan': result += '-01'; break
+    case 'Feb': result += '-02'; break
+    case 'Mar': result += '-03'; break
+    case 'Apr': result += '-04'; break
+    case 'May': result += '-05'; break
+    case 'Jun': result += '-06'; break
+    case 'Jul': result += '-07'; break
+    case 'Aug': result += '-08'; break
+    case 'Sep': result += '-09'; break
+    case 'Oct': result += '-10'; break
+    case 'Nov': result += '-11'; break
+    case 'Dec': result += '-12'; break
+
+    default: return result
+  }
+
+  if(day) return result + `-${day.padStart(2, '0')}`
+
+  return result
 }
 
 
@@ -59,7 +87,7 @@ fetchUrl('https://computing.cs.cmu.edu/desktop/os-lifecycle.html')
 .then(function(html)
 {
   const date = load(html)('p.sidedate').text().trim().replace(/^As of: /, '')
-  const increment = parseDate(moment(date, 'D MMM Y')).format('Y.M.D')
+  const increment = parseDate(date).replace(/-/g, '.')
 
   if(lte(increment, version)) return
 
