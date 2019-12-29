@@ -4,11 +4,10 @@ const {writeFile} = require('fs').promises
 
 const {load} = require('cheerio')
 const {AbstractToJson: {fetchUrl}} = require('pagetojson')
-const release = require('release-it')
 const {lte} = require('semver')
 const {convert} = require('tabletojson')
 
-const {version} = require('./package.json')
+const package = require('./package.json')
 
 
 const REGEXP_ARCH = /^([ \S]+?)\s+(\d+)-bit$/
@@ -89,7 +88,7 @@ fetchUrl('https://computing.cs.cmu.edu/desktop/os-lifecycle.html')
   const date = load(html)('p.sidedate').text().trim().replace(/^As of: /, '')
   const increment = parseDate(date).replace(/-/g, '.')
 
-  if(lte(increment, version)) return
+  if(lte(increment, package.version)) return
 
   const lifecycles = convert(html, {useFirstRowForHeadings: true})[1].slice(1)
 
@@ -97,15 +96,6 @@ fetchUrl('https://computing.cs.cmu.edu/desktop/os-lifecycle.html')
 
   writeFile('index.json', JSON.stringify(cleanedData, null, 2))
 
-  const options =
-  {
-    ci: true,
-    git:
-    {
-      requireCleanWorkingDir: false
-    },
-    increment
-  }
-
-  return release(options)
+  package.version = increment
+  writeFile('package.json', JSON.stringify(package, null, 2))
 })

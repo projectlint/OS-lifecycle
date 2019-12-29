@@ -3,6 +3,7 @@
   "version": "2019.12.16",
   "description": "Operating System support lifecycle",
   "scripts": {
+    "prepare": "npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,6 @@
   "devDependencies": {
     "cheerio": "^1.0.0-rc.3",
     "pagetojson": "0.0.8",
-    "release-it": "^12.4.3",
     "semver": "^7.1.1",
     "tabletojson": "github:projectlint/tabletojson"
   }
