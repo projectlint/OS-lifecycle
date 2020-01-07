@@ -20,6 +20,6 @@
     "cheerio": "^1.0.0-rc.3",
     "pagetojson": "0.0.8",
     "semver": "^7.1.1",
-    "tabletojson": "github:projectlint/tabletojson"
+    "tabletojson": "^1.1.1"
   }
 }
