@@ -1,0 +1,166 @@
+{
+  "data": [
+    {
+      "Version": "Ubuntu 19.10",
+      "Code name": "Eoan Ermine",
+      "Docs": "Release Notes",
+      "Release": "October 17, 2019",
+      "End of Standard Support": "July, 2020",
+      "End of Life": "July, 2020"
+    },
+    {
+      "Version": "Ubuntu 18.04.4 LTS",
+      "Code name": "Bionic Beaver",
+      "Docs": "Changes",
+      "Release": "February 12, 2020",
+      "End of Standard Support": "April 2023",
+      "End of Life": "April 2028"
+    },
+    {
+      "Version": "Ubuntu 18.04.3 LTS",
+      "Code name": "Bionic Beaver",
+      "Docs": "Changes",
+      "Release": "August 8, 2019",
+      "End of Standard Support": "April 2023",
+      "End of Life": "April 2028"
+    },
+    {
+      "Version": "Ubuntu 18.04.2 LTS",
+      "Code name": "Bionic Beaver",
+      "Docs": "Changes",
+      "Release": "February 15, 2019",
+      "End of Standard Support": "April 2023",
+      "End of Life": "April 2028"
+    },
+    {
+      "Version": "Ubuntu 18.04.1 LTS",
+      "Code name": "Bionic Beaver",
+      "Docs": "Changes",
+      "Release": "July 26, 2018",
+      "End of Standard Support": "April 2023",
+      "End of Life": "April 2028"
+    },
+    {
+      "Version": "Ubuntu 18.04 LTS",
+      "Code name": "Bionic Beaver",
+      "Docs": "Release Notes",
+      "Release": "April 26, 2018",
+      "End of Standard Support": "April 2023",
+      "End of Life": "April 2028"
+    },
+    {
+      "Version": "Ubuntu 16.04.6 LTS",
+      "Code name": "Xenial Xerus",
+      "Docs": "Changes",
+      "Release": "February 28, 2019",
+      "End of Standard Support": "April 2021",
+      "End of Life": "April 2024"
+    },
+    {
+      "Version": "Ubuntu 16.04.5 LTS",
+      "Code name": "Xenial Xerus",
+      "Docs": "Changes",
+      "Release": "August 2, 2018",
+      "End of Standard Support": "April 2021",
+      "End of Life": "April 2024"
+    },
+    {
+      "Version": "Ubuntu 16.04.4 LTS",
+      "Code name": "Xenial Xerus",
+      "Docs": "Changes",
+      "Release": "March 1, 2018",
+      "End of Standard Support": "April 2021",
+      "End of Life": "April 2024"
+    },
+    {
+      "Version": "Ubuntu 16.04.3 LTS",
+      "Code name": "Xenial Xerus",
+      "Docs": "Changes",
+      "Release": "August 3, 2017",
+      "End of Standard Support": "April 2021",
+      "End of Life": "April 2024"
+    },
+    {
+      "Version": "Ubuntu 16.04.2 LTS",
+      "Code name": "Xenial Xerus",
+      "Docs": "Changes",
+      "Release": "February 16, 2017",
+      "End of Standard Support": "April 2021",
+      "End of Life": "April 2024"
+    },
+    {
+      "Version": "Ubuntu 16.04.1 LTS",
+      "Code name": "Xenial Xerus",
+      "Docs": "Changes",
+      "Release": "July 21, 2016",
+      "End of Standard Support": "April 2021",
+      "End of Life": "April 2024"
+    },
+    {
+      "Version": "Ubuntu 16.04 LTS",
+      "Code name": "Xenial Xerus",
+      "Docs": "Release Notes",
+      "Release": "April 21, 2016",
+      "End of Standard Support": "April 2021",
+      "End of Life": "April 2024"
+    },
+    {
+      "Version": "Ubuntu 14.04.6 LTS",
+      "Code name": "Trusty Tahr",
+      "Docs": "Changes",
+      "Release": "March 7, 2019",
+      "End of Standard Support": "April 2019",
+      "End of Life": "April 2022"
+    },
+    {
+      "Version": "Ubuntu 14.04.5 LTS",
+      "Code name": "Trusty Tahr",
+      "Docs": "Changes",
+      "Release": "August 4, 2016",
+      "End of Standard Support": "April 2019",
+      "End of Life": "April 2022"
+    },
+    {
+      "Version": "Ubuntu 14.04.4 LTS",
+      "Code name": "Trusty Tahr",
+      "Docs": "Changes",
+      "Release": "February 18, 2016",
+      "End of Standard Support": "HWE August 2016",
+      "End of Life": "April 2022"
+    },
+    {
+      "Version": "Ubuntu 14.04.3 LTS",
+      "Code name": "Trusty Tahr",
+      "Docs": "Changes",
+      "Release": "August 6, 2015",
+      "End of Standard Support": "HWE August 2016",
+      "End of Life": "April 2022"
+    },
+    {
+      "Version": "Ubuntu 14.04.2 LTS",
+      "Code name": "Trusty Tahr",
+      "Docs": "Changes",
+      "Release": "February 20, 2015",
+      "End of Standard Support": "HWE August 2016",
+      "End of Life": "April 2022"
+    },
+    {
+      "Version": "Ubuntu 14.04.1 LTS",
+      "Code name": "Trusty Tahr",
+      "Docs": "Changes",
+      "Release": "July 24, 2014",
+      "End of Standard Support": "April 2019",
+      "End of Life": "April 2022"
+    },
+    {
+      "Version": "Ubuntu 14.04 LTS",
+      "Code name": "Trusty Tahr",
+      "Docs": "Release Notes",
+      "Release": "April 17, 2014",
+      "End of Standard Support": "April 2019",
+      "End of Life": "April 2022"
+    }
+  ],
+  "url": "https://wiki.ubuntu.com/Releases",
+  "date": "2020-02-17"
+}
