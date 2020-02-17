@@ -221,7 +221,7 @@
     "version": "16.04.1"
   },
   {
-    "codename": "Xenial Xerus",eolDate
+    "codename": "Xenial Xerus",
     "eolDate": "2021-04",
     "lts": true,
     "name": "Ubuntu",
