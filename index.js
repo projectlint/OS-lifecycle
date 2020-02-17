@@ -1,12 +1,12 @@
 const all = require('./index.json')
 
 
-function applyNameCodename(obj, lifecycle)
+function applyCodename(obj, lifecycle)
 {
-  obj[lifecycle['Operating System']] = lifecycle
-
   const {codename} = lifecycle
-  if(codename) obj[codename] = lifecycle
+  if(codename
+  && (!obj[codename] || obj[codename].releaseDate < lifecycle.releaseDate))
+    obj[codename] = lifecycle
 
   return obj
 }
@@ -17,15 +17,20 @@ function generateConstants(all)
 
   for(const lifecycle of all)
   {
-    const osFamilyName = lifecycle['OS Family']
+    const osFamilyName = lifecycle.name
 
     let family = osFamily[osFamilyName]
     if(!family) osFamily[osFamilyName] = family = {}
 
-    applyNameCodename(family, lifecycle)
+    family[lifecycle.version] = lifecycle
+
+    applyCodename(family, lifecycle)
 
     if(!family.newest
-    || family.newest['Vendor Release Date'] < lifecycle['Vendor Release Date'])
+    || (osFamilyName === 'Ubuntu'
+        && family.newest.version.substr(0, 5) < lifecycle.version.substr(0, 5))
+    || (osFamilyName !== 'Ubuntu'
+        && family.newest.releaseDate < lifecycle.releaseDate))
       family.newest = lifecycle
   }
 
@@ -36,7 +41,7 @@ function generateConstants(all)
     result[name] = family
 
     for(const lifecycle of Object.values(family))
-      applyNameCodename(result, lifecycle)
+      applyCodename(result, lifecycle)
   }
 
   return result
@@ -44,8 +49,7 @@ function generateConstants(all)
 
 function filterMaintained(lifecycle)
 {
-  return this > lifecycle['Vendor Release Date']
-  && this < lifecycle['Latest Vendor EOL Date']
+  return lifecycle.releaseDate < this && this < lifecycle.eolDate
 }
 
 
