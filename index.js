@@ -47,9 +47,9 @@ function generateConstants(all)
   return result
 }
 
-function filterMaintained(lifecycle)
+function filterMaintained({eolDate, releaseDate})
 {
-  return lifecycle.releaseDate < this && this < lifecycle.eolDate
+  return new Date(releaseDate) < this && this < new Date(eolDate)
 }
 
 
