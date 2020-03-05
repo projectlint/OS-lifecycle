@@ -101,6 +101,8 @@ Promise.all([
       return lifecycle['OS Family'] !== 'Ubuntu Linux'
     })
 
+  const oldVersion = package.version
+
   const version = results.reduce(function(acum, result, index)
   {
     if(!result) return acum
@@ -123,12 +125,19 @@ Promise.all([
     if(gt(version, acum)) acum = version
 
     return acum
-  }, package.version)
+  }, oldVersion)
 
-  package.version = version
+  function writePackageJson()
+  {
+    if(lte(version, oldVersion)) return
+
+    package.version = version
+
+    return writeFile('package.json', JSON.stringify(package, null, 2))
+  }
 
   return Promise.all([
     writeFile('index.json', JSON.stringify(indexJson, null, 2)),
-    writeFile('package.json', JSON.stringify(package, null, 2))
+    writePackageJson()
   ])
 })
