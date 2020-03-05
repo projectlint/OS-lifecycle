@@ -103,25 +103,24 @@ Promise.all([
 
   const version = results.reduce(function(acum, result, index)
   {
-    if(result)
+    if(!result) return acum
+
+    const {data, version} = result
+
+    for(const lifecycle of data.map(strategies[index].normalize))
     {
-      const {data, version} = result
-
-      for(const lifecycle of data.map(strategies[index].normalize))
+      const index = indexJson.findIndex(function({name, version})
       {
-        const index = indexJson.findIndex(function({name, version})
-        {
-          return name === lifecycle.name && version === lifecycle.version
-        })
+        return name === lifecycle.name && version === lifecycle.version
+      })
 
-        if(index < 0)
-          indexJson.push(lifecycle)
-        else
-          Object.assign(indexJson[index], lifecycle)
-      }
-
-      if(gt(version, acum)) acum = version
+      if(index < 0)
+        indexJson.push(lifecycle)
+      else
+        Object.assign(indexJson[index], lifecycle)
     }
+
+    if(gt(version, acum)) acum = version
 
     return acum
   }, package.version)
