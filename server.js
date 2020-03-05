@@ -53,7 +53,7 @@ function scrap({url, name, idField, scrapDate, scrapTable})
     data.url = url
     data.date = date
 
-    return writeFile(filePath, JSON.stringify(data, null, 2))
+    return writeJsonFile(filePath, data)
     .then(function()
     {
       data.version = version
@@ -75,6 +75,11 @@ function onReadIndexFailure(error)
   if(error.code !== 'ENOENT') throw error
 
   return []
+}
+
+function writeJsonFile(filePath, data)
+{
+  return writeFile(filePath, JSON.stringify(data, null, 2))
 }
 
 
@@ -133,11 +138,11 @@ Promise.all([
 
     package.version = version
 
-    return writeFile('package.json', JSON.stringify(package, null, 2))
+    return writeJsonFile('package.json', package)
   }
 
   return Promise.all([
-    writeFile('index.json', JSON.stringify(indexJson, null, 2)),
+    writeJsonFile('index.json', indexJson),
     writePackageJson()
   ])
 })
