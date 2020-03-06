@@ -14,14 +14,29 @@ jobs:
 
     - run: npm install
 
-    - uses: stefanzweifel/git-auto-commit-action@v4.0.0
+    - run: echo \"::set-output name=version::`./server.js --print`\"
+      id: update
+
+    - uses: stefanzweifel/git-auto-commit-action@v4.1.0
+      id: "auto-commit-action"
       with:
-        commit_message: Update data
+        commit_message: steps.update.outputs.version
+        tagging_message: steps.update.outputs.version
+
+  publish:
+    if: jobs.build.steps.auto-commit-action.outputs.changes_detected == true
+
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - run: npm ci
 
     - uses: actions/setup-node@v1
       with:
         registry-url: https://registry.npmjs.org/
-    - run: npm ci
     - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{secrets.npm_token}}
@@ -30,7 +45,6 @@ jobs:
       with:
         registry-url: https://npm.pkg.github.com/
         scope: '@projectlint'
-    - run: npm ci
     - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

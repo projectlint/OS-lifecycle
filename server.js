@@ -136,6 +136,8 @@ Promise.all([
   {
     if(lte(version, oldVersion)) version = inc(oldVersion, 'prerelease')
 
+    if(process.argv[2] === '--print') process.stdout.write(version)
+
     package.version = version
 
     return writeJsonFile('package.json', package)
