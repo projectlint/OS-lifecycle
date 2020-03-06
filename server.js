@@ -5,7 +5,7 @@ const {join} = require('path')
 
 const {load} = require('cheerio')
 const {AbstractToJson: {fetchUrl}} = require('pagetojson')
-const {gt, lte} = require('semver')
+const {gt, inc, lte} = require('semver')
 const {convert} = require('tabletojson')
 
 const package = require('./package.json')
@@ -134,7 +134,7 @@ Promise.all([
 
   function writePackageJson()
   {
-    if(lte(version, oldVersion)) return
+    if(lte(version, oldVersion)) version = inc(oldVersion, 'prerelease')
 
     package.version = version
 
