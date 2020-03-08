@@ -4,6 +4,7 @@ Operating System support lifecycle
 ## Data sources
 
 - https://computing.cs.cmu.edu/desktop/os-lifecycle.html
+- https://wiki.ubuntu.com/Releases
 
 ## API
 
