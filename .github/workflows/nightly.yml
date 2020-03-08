@@ -20,8 +20,8 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v4.1.0
       id: "auto-commit-action"
       with:
-        commit_message: steps.update.outputs.version
-        tagging_message: steps.update.outputs.version
+        commit_message: ${{steps.update.outputs.version}}
+        tagging_message: ${{steps.update.outputs.version}}
 
     - uses: actions/setup-node@v1
       with:
