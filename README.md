@@ -25,7 +25,5 @@ object with the next entries:
   released one
 - Operating systems entries for each one
 
-Each operating system entry is a plain object with the fields `OS Family`,
-`Operating System`, `Latest Update or Service Pack`, `SCS Support Status`,
-`Vendor Release Date`, `Start of SCS Support`, `End of SCS Support` and
-`Latest Vendor EOL Date`, and when possible `codename` and `bits` fields too.
+Each operating system entry is a plain object with the fields `eolDate`, `name`,
+`releaseDate` and `version`, and when possible `codename` and `lts` fields too.
