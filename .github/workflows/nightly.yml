@@ -24,31 +24,21 @@ jobs:
         commit_message: ${{steps.update.outputs.version}}
         tagging_message: ${{steps.update.outputs.version}}
 
-  publish-npm:
-    runs-on: ubuntu-latest
-
-    if: jobs.check.steps.auto-commit-action.outputs.changes_detected == 'true'
-    needs: check
-
-    steps:
     - uses: actions/setup-node@v1
+      if: steps.auto-commit-action.outputs.changes_detected == 'true'
       with:
         registry-url: https://registry.npmjs.org/
     - run: npm publish
+      if: steps.auto-commit-action.outputs.changes_detected == 'true'
       env:
         NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
-  publish-github:
-    runs-on: ubuntu-latest
-
-    if: jobs.check.steps.auto-commit-action.outputs.changes_detected == 'true'
-    needs: check
-
-    steps:
     - uses: actions/setup-node@v1
+      if: steps.auto-commit-action.outputs.changes_detected == 'true'
       with:
         registry-url: https://npm.pkg.github.com/
         scope: '@projectlint'
     - run: npm publish
+      if: steps.auto-commit-action.outputs.changes_detected == 'true'
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
