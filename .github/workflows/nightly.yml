@@ -14,7 +14,7 @@ jobs:
 
     - run: npm install
 
-    - run: echo "::set-output name=version::`./server.js --print`"
+    - run: echo "::set-output name=version::`./server.js --print --unhandled-rejections=strict`"
       id: update
 
     - uses: stefanzweifel/git-auto-commit-action@v4.1.6
