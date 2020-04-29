@@ -21,6 +21,7 @@ jobs:
       if: steps.update.outputs.version != ''
       id: "auto-commit-action"
       with:
+        branch: master
         commit_message: ${{steps.update.outputs.version}}
         tagging_message: ${{steps.update.outputs.version}}
 
