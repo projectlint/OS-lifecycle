@@ -5,8 +5,8 @@
       "Code name": "Eoan Ermine",
       "Docs": "Release Notes",
       "Release": "October 17, 2019",
-      "End of Standard Support": "July, 2020",
-      "End of Life": "July, 2020"
+      "End of Standard Support": "July 2020",
+      "End of Life": "July 2020"
     },
     {
       "Version": "Ubuntu 18.04.4 LTS",
@@ -159,8 +159,16 @@
       "Release": "April 17, 2014",
       "End of Standard Support": "April 2019",
       "End of Life": "April 2022"
+    },
+    {
+      "Version": "Ubuntu 20.04 LTS",
+      "Code name": "Focal Fossa",
+      "Docs": "Release Notes",
+      "Release": "April 23, 2020",
+      "End of Standard Support": "April 2025",
+      "End of Life": "TBA"
     }
   ],
   "url": "https://wiki.ubuntu.com/Releases",
-  "date": "2020-02-17"
+  "date": "2020-04-26"
 }
