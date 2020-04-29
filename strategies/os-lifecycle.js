@@ -109,9 +109,9 @@ exports.normalize = function(lifecycle)
 
   return {
     codename,
-    eolDate: parseDate(latestVendorEolDate),
+    eol: parseDate(latestVendorEolDate),
     name,
-    releaseDate: parseDate(lifecycle['Vendor Release Date']),
+    release: parseDate(lifecycle['Vendor Release Date']),
     version
   }
 }

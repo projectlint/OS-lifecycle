@@ -44,10 +44,10 @@ exports.normalize = function(lifecycle)
 
   return {
     codename: lifecycle['Code name'],
-    eolDate: parseDate(lifecycle['End of Standard Support']),
+    eol: parseDate(lifecycle['End of Standard Support']),
     lts: lts === 'LTS' || undefined,
     name,
-    releaseDate: parseDate(lifecycle['Release']),
+    release: parseDate(lifecycle['Release']),
     version
   }
 }

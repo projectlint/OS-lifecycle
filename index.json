@@ -1,295 +1,295 @@
 [
   {
-    "eolDate": "2025-10-14",
+    "eol": "2025-10-14",
     "name": "Windows",
-    "releaseDate": "2015-07-29",
+    "release": "2015-07-29",
     "version": "10.1809"
   },
   {
-    "eolDate": "2023-01-10",
+    "eol": "2023-01-10",
     "name": "Windows",
-    "releaseDate": "2012-10-26",
+    "release": "2012-10-26",
     "version": "8.1"
   },
   {
-    "eolDate": "2020-01-14",
+    "eol": "2020-01-14",
     "name": "Windows",
-    "releaseDate": "2009-10-22",
+    "release": "2009-10-22",
     "version": "7 SP1"
   },
   {
-    "eolDate": "2017-04-11",
+    "eol": "2017-04-11",
     "name": "Windows",
-    "releaseDate": "2007-01-30",
+    "release": "2007-01-30",
     "version": "Vista SP2"
   },
   {
-    "eolDate": "2014-04-08",
+    "eol": "2014-04-08",
     "name": "Windows",
-    "releaseDate": "2001-10-25",
+    "release": "2001-10-25",
     "version": "XP SP3"
   },
   {
-    "eolDate": "2027-01-11",
+    "eol": "2027-01-11",
     "name": "Windows Server",
-    "releaseDate": "2016-09-26",
+    "release": "2016-09-26",
     "version": "2016"
   },
   {
-    "eolDate": "2023-10-10",
+    "eol": "2023-10-10",
     "name": "Windows Server",
-    "releaseDate": "2012-09-04",
+    "release": "2012-09-04",
     "version": "2012 R2"
   },
   {
-    "eolDate": "2020-01-14",
+    "eol": "2020-01-14",
     "name": "Windows Server",
-    "releaseDate": "2008-02-27",
+    "release": "2008-02-27",
     "version": "2008 R2"
   },
   {
-    "eolDate": "2015-07-14",
+    "eol": "2015-07-14",
     "name": "Windows Server",
-    "releaseDate": "2003-04-24",
+    "release": "2003-04-24",
     "version": "2003 R2"
   },
   {
     "codename": "Catalina",
-    "eolDate": "2022-11",
+    "eol": "2022-11",
     "name": "macOS",
-    "releaseDate": "2019-10-07",
+    "release": "2019-10-07",
     "version": "10.15"
   },
   {
     "codename": "Mojave",
-    "eolDate": "2021",
+    "eol": "2021",
     "name": "macOS",
-    "releaseDate": "2018-09-24",
+    "release": "2018-09-24",
     "version": "10.14"
   },
   {
     "codename": "High Sierra",
-    "eolDate": "2020",
+    "eol": "2020",
     "name": "macOS",
-    "releaseDate": "2017-09-25",
+    "release": "2017-09-25",
     "version": "10.13"
   },
   {
     "codename": "Sierra",
-    "eolDate": "2019",
+    "eol": "2019",
     "name": "macOS",
-    "releaseDate": "2016-09-20",
+    "release": "2016-09-20",
     "version": "10.12"
   },
   {
     "codename": "El Capitan",
-    "eolDate": "2018-09",
+    "eol": "2018-09",
     "name": "macOS",
-    "releaseDate": "2015-09-30",
+    "release": "2015-09-30",
     "version": "10.11"
   },
   {
     "codename": "Yosemite",
-    "eolDate": "2017",
+    "eol": "2017",
     "name": "macOS",
-    "releaseDate": "2014-10-16",
+    "release": "2014-10-16",
     "version": "10.10"
   },
   {
-    "eolDate": "2011-12",
+    "eol": "2011-12",
     "name": "Fedora",
-    "releaseDate": "2010-11-02",
+    "release": "2010-11-02",
     "version": "14"
   },
   {
-    "eolDate": "2009-12",
+    "eol": "2009-12",
     "name": "Fedora",
-    "releaseDate": "2008-11-25",
+    "release": "2008-11-25",
     "version": "10"
   },
   {
-    "eolDate": "2021-01",
+    "eol": "2021-01",
     "name": "Solaris",
-    "releaseDate": "2005-01-31",
+    "release": "2005-01-31",
     "version": "10"
   },
   {
-    "eolDate": "2024-06-30",
+    "eol": "2024-06-30",
     "name": "CentOS",
-    "releaseDate": "2014-06-20",
+    "release": "2014-06-20",
     "version": "7"
   },
   {
-    "eolDate": "2020-11-30",
+    "eol": "2020-11-30",
     "name": "CentOS",
-    "releaseDate": "2011-07-12",
+    "release": "2011-07-12",
     "version": "6"
   },
   {
     "codename": "Eoan Ermine",
-    "eolDate": "2020-07",
+    "eol": "2020-07",
     "name": "Ubuntu",
-    "releaseDate": "2019-10-17",
+    "release": "2019-10-17",
     "version": "19.10"
   },
   {
     "codename": "Bionic Beaver",
-    "eolDate": "2023-04",
+    "eol": "2023-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2020-02-12",
+    "release": "2020-02-12",
     "version": "18.04.4"
   },
   {
     "codename": "Bionic Beaver",
-    "eolDate": "2023-04",
+    "eol": "2023-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2019-08-08",
+    "release": "2019-08-08",
     "version": "18.04.3"
   },
   {
     "codename": "Bionic Beaver",
-    "eolDate": "2023-04",
+    "eol": "2023-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2019-02-15",
+    "release": "2019-02-15",
     "version": "18.04.2"
   },
   {
     "codename": "Bionic Beaver",
-    "eolDate": "2023-04",
+    "eol": "2023-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2018-07-26",
+    "release": "2018-07-26",
     "version": "18.04.1"
   },
   {
     "codename": "Bionic Beaver",
-    "eolDate": "2023-04",
+    "eol": "2023-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2018-04-26",
+    "release": "2018-04-26",
     "version": "18.04"
   },
   {
     "codename": "Xenial Xerus",
-    "eolDate": "2021-04",
+    "eol": "2021-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2019-02-28",
+    "release": "2019-02-28",
     "version": "16.04.6"
   },
   {
     "codename": "Xenial Xerus",
-    "eolDate": "2021-04",
+    "eol": "2021-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2018-08-02",
+    "release": "2018-08-02",
     "version": "16.04.5"
   },
   {
     "codename": "Xenial Xerus",
-    "eolDate": "2021-04",
+    "eol": "2021-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2018-03-01",
+    "release": "2018-03-01",
     "version": "16.04.4"
   },
   {
     "codename": "Xenial Xerus",
-    "eolDate": "2021-04",
+    "eol": "2021-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2017-08-03",
+    "release": "2017-08-03",
     "version": "16.04.3"
   },
   {
     "codename": "Xenial Xerus",
-    "eolDate": "2021-04",
+    "eol": "2021-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2017-02-16",
+    "release": "2017-02-16",
     "version": "16.04.2"
   },
   {
     "codename": "Xenial Xerus",
-    "eolDate": "2021-04",
+    "eol": "2021-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2016-07-21",
+    "release": "2016-07-21",
     "version": "16.04.1"
   },
   {
     "codename": "Xenial Xerus",
-    "eolDate": "2021-04",
+    "eol": "2021-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2016-04-21",
+    "release": "2016-04-21",
     "version": "16.04"
   },
   {
     "codename": "Trusty Tahr",
-    "eolDate": "2019-04",
+    "eol": "2019-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2019-03-07",
+    "release": "2019-03-07",
     "version": "14.04.6"
   },
   {
     "codename": "Trusty Tahr",
-    "eolDate": "2019-04",
+    "eol": "2019-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2016-08-04",
+    "release": "2016-08-04",
     "version": "14.04.5"
   },
   {
     "codename": "Trusty Tahr",
-    "eolDate": "2016-08",
+    "eol": "2016-08",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2016-02-18",
+    "release": "2016-02-18",
     "version": "14.04.4"
   },
   {
     "codename": "Trusty Tahr",
-    "eolDate": "2016-08",
+    "eol": "2016-08",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2015-08-06",
+    "release": "2015-08-06",
     "version": "14.04.3"
   },
   {
     "codename": "Trusty Tahr",
-    "eolDate": "2016-08",
+    "eol": "2016-08",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2015-02-20",
+    "release": "2015-02-20",
     "version": "14.04.2"
   },
   {
     "codename": "Trusty Tahr",
-    "eolDate": "2019-04",
+    "eol": "2019-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2014-07-24",
+    "release": "2014-07-24",
     "version": "14.04.1"
   },
   {
     "codename": "Trusty Tahr",
-    "eolDate": "2019-04",
+    "eol": "2019-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2014-04-17",
+    "release": "2014-04-17",
     "version": "14.04"
   },
   {
     "codename": "Focal Fossa",
-    "eolDate": "2025-04",
+    "eol": "2025-04",
     "lts": true,
     "name": "Ubuntu",
-    "releaseDate": "2020-04-23",
+    "release": "2020-04-23",
     "version": "20.04"
   }
 ]

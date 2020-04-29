@@ -25,5 +25,5 @@ object with the next entries:
   released one
 - Operating systems entries for each one
 
-Each operating system entry is a plain object with the fields `eolDate`, `name`,
-`releaseDate` and `version`, and when possible `codename` and `lts` fields too.
+Each operating system entry is a plain object with the fields `eol`, `name`,
+`release` and `version`, and when possible `codename` and `lts` fields too.
