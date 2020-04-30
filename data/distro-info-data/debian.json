@@ -1,0 +1,149 @@
+{
+  "data": [
+    {
+      "version": "1.1",
+      "codename": "Buzz",
+      "series": "buzz",
+      "created": "1993-08-16",
+      "release": "1996-06-17",
+      "eol": "1997-06-05"
+    },
+    {
+      "version": "1.2",
+      "codename": "Rex",
+      "series": "rex",
+      "created": "1996-06-17",
+      "release": "1996-12-12",
+      "eol": "1998-06-05"
+    },
+    {
+      "version": "1.3",
+      "codename": "Bo",
+      "series": "bo",
+      "created": "1996-12-12",
+      "release": "1997-06-05",
+      "eol": "1999-03-09"
+    },
+    {
+      "version": "2.0",
+      "codename": "Hamm",
+      "series": "hamm",
+      "created": "1997-06-05",
+      "release": "1998-07-24",
+      "eol": "2000-03-09"
+    },
+    {
+      "version": "2.1",
+      "codename": "Slink",
+      "series": "slink",
+      "created": "1998-07-24",
+      "release": "1999-03-09",
+      "eol": "2000-10-30"
+    },
+    {
+      "version": "2.2",
+      "codename": "Potato",
+      "series": "potato",
+      "created": "1999-03-09",
+      "release": "2000-08-15",
+      "eol": "2003-07-30"
+    },
+    {
+      "version": "3.0",
+      "codename": "Woody",
+      "series": "woody",
+      "created": "2000-08-15",
+      "release": "2002-07-19",
+      "eol": "2006-06-30"
+    },
+    {
+      "version": "3.1",
+      "codename": "Sarge",
+      "series": "sarge",
+      "created": "2002-07-19",
+      "release": "2005-06-06",
+      "eol": "2008-03-30"
+    },
+    {
+      "version": "4.0",
+      "codename": "Etch",
+      "series": "etch",
+      "created": "2005-06-06",
+      "release": "2007-04-08",
+      "eol": "2010-02-15"
+    },
+    {
+      "version": "5.0",
+      "codename": "Lenny",
+      "series": "lenny",
+      "created": "2007-04-08",
+      "release": "2009-02-14",
+      "eol": "2012-02-06"
+    },
+    {
+      "version": "6.0",
+      "codename": "Squeeze",
+      "series": "squeeze",
+      "created": "2009-02-14",
+      "release": "2011-02-06",
+      "eol": "2014-05-31"
+    },
+    {
+      "version": "7",
+      "codename": "Wheezy",
+      "series": "wheezy",
+      "created": "2011-02-06",
+      "release": "2013-05-04",
+      "eol": "2016-04-26"
+    },
+    {
+      "version": "8",
+      "codename": "Jessie",
+      "series": "jessie",
+      "created": "2013-05-04",
+      "release": "2015-04-25",
+      "eol": "2018-06-06"
+    },
+    {
+      "version": "9",
+      "codename": "Stretch",
+      "series": "stretch",
+      "created": "2015-04-25",
+      "release": "2017-06-17",
+      "eol": "2020-07-06"
+    },
+    {
+      "version": "10",
+      "codename": "Buster",
+      "series": "buster",
+      "created": "2017-06-17",
+      "release": "2019-07-06"
+    },
+    {
+      "version": "11",
+      "codename": "Bullseye",
+      "series": "bullseye",
+      "created": "2019-07-06"
+    },
+    {
+      "version": "12",
+      "codename": "Bookworm",
+      "series": "bookworm",
+      "created": "2021-08-01"
+    },
+    {
+      "version": "",
+      "codename": "Sid",
+      "series": "sid",
+      "created": "1993-08-16"
+    },
+    {
+      "version": "",
+      "codename": "Experimental",
+      "series": "experimental",
+      "created": "1993-08-16"
+    }
+  ],
+  "url": "https://salsa.debian.org/debian/distro-info-data/-/blob/master/debian.csv",
+  "date": "2020-04-24T15:26:46Z"
+}

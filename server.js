@@ -89,6 +89,7 @@ function writeJsonFile(filePath, data)
 const strategies =
 [
   require('./strategies/os-lifecycle'),
+  require('./strategies/distro-info-data'),
   require('./strategies/Ubuntu'),
   // require('./strategies/Windows')
 ]
