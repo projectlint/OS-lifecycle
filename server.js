@@ -6,7 +6,6 @@ const {join} = require('path')
 const {load} = require('cheerio')
 const {AbstractToJson: {fetchUrl}} = require('pagetojson')
 const {gt, inc, lte} = require('semver')
-const {Tabletojson: {convert}} = require('tabletojson')
 
 const package = require('./package.json')
 
@@ -35,25 +34,29 @@ function scrap({url, name, idField, scrapDate, scrapTable})
 
     if(data.date && lte(version, date2version(data.date))) return
 
-    const options = {useFirstRowForHeadings: true}
-
-    for(const tableData of scrapTable(convert(html, options)))
+    return Promise.resolve(scrapTable(html))
+    .then(function(table)
     {
-      const index = data.data.findIndex(function(item)
+      function findRow(item)
       {
-        return item[idField] === tableData[idField]
-      })
+        return item[idField] === this[idField]
+      }
 
-      if(index < 0)
-        data.data.push(tableData)
-      else
-        Object.assign(data.data[index], tableData)
-    }
+      for(const row of table)
+      {
+        const index = data.data.findIndex(findRow, row)
 
-    data.url = url
-    data.date = date
+        if(index < 0)
+          data.data.push(row)
+        else
+          Object.assign(data.data[index], row)
+      }
 
-    return writeJsonFile(filePath, data)
+      data.url = url
+      data.date = date
+
+      return writeJsonFile(filePath, data)
+    })
     .then(function()
     {
       data.version = version
