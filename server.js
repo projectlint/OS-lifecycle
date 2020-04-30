@@ -119,9 +119,10 @@ Promise.all([
 
     for(const lifecycle of data.map(strategies[index].normalize))
     {
-      const index = indexJson.findIndex(function({name, version})
+      const index = indexJson.findIndex(function({codename, name, version})
       {
-        return name === lifecycle.name && version === lifecycle.version
+        return name === lifecycle.name && codename === lifecycle.codename
+            && version === lifecycle.version
       })
 
       if(index < 0)
