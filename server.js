@@ -111,7 +111,7 @@ Promise.all([
 
   const oldVersion = package.version
 
-  const version = results.reduce(function(acum, result, index)
+  let version = results.reduce(function(acum, result, index)
   {
     if(!result) return acum
 
