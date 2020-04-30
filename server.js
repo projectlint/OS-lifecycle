@@ -90,6 +90,7 @@ const strategies =
 [
   require('./strategies/os-lifecycle'),
   require('./strategies/distro-info-data/debian'),
+  require('./strategies/distro-info-data/ubuntu'),
   require('./strategies/Ubuntu'),
   // require('./strategies/Windows')
 ]

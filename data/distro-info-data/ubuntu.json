@@ -1,0 +1,273 @@
+{
+  "data": [
+    {
+      "version": "4.10",
+      "codename": "Warty Warthog",
+      "series": "warty",
+      "created": "2004-03-05",
+      "release": "2004-10-20",
+      "eol": "2006-04-30"
+    },
+    {
+      "version": "5.04",
+      "codename": "Hoary Hedgehog",
+      "series": "hoary",
+      "created": "2004-10-20",
+      "release": "2005-04-08",
+      "eol": "2006-10-31"
+    },
+    {
+      "version": "5.10",
+      "codename": "Breezy Badger",
+      "series": "breezy",
+      "created": "2005-04-08",
+      "release": "2005-10-12",
+      "eol": "2007-04-13"
+    },
+    {
+      "version": "6.06 LTS",
+      "codename": "Dapper Drake",
+      "series": "dapper",
+      "created": "2005-10-12",
+      "release": "2006-06-01",
+      "eol": "2009-07-14",
+      "eol-server": "2011-06-01"
+    },
+    {
+      "version": "6.10",
+      "codename": "Edgy Eft",
+      "series": "edgy",
+      "created": "2006-06-01",
+      "release": "2006-10-26",
+      "eol": "2008-04-25"
+    },
+    {
+      "version": "7.04",
+      "codename": "Feisty Fawn",
+      "series": "feisty",
+      "created": "2006-10-26",
+      "release": "2007-04-19",
+      "eol": "2008-10-19"
+    },
+    {
+      "version": "7.10",
+      "codename": "Gutsy Gibbon",
+      "series": "gutsy",
+      "created": "2007-04-19",
+      "release": "2007-10-18",
+      "eol": "2009-04-18"
+    },
+    {
+      "version": "8.04 LTS",
+      "codename": "Hardy Heron",
+      "series": "hardy",
+      "created": "2007-10-18",
+      "release": "2008-04-24",
+      "eol": "2011-05-12",
+      "eol-server": "2013-05-09"
+    },
+    {
+      "version": "8.10",
+      "codename": "Intrepid Ibex",
+      "series": "intrepid",
+      "created": "2008-04-24",
+      "release": "2008-10-30",
+      "eol": "2010-04-30"
+    },
+    {
+      "version": "9.04",
+      "codename": "Jaunty Jackalope",
+      "series": "jaunty",
+      "created": "2008-10-30",
+      "release": "2009-04-23",
+      "eol": "2010-10-23"
+    },
+    {
+      "version": "9.10",
+      "codename": "Karmic Koala",
+      "series": "karmic",
+      "created": "2009-04-23",
+      "release": "2009-10-29",
+      "eol": "2011-04-29"
+    },
+    {
+      "version": "10.04 LTS",
+      "codename": "Lucid Lynx",
+      "series": "lucid",
+      "created": "2009-10-29",
+      "release": "2010-04-29",
+      "eol": "2013-05-09",
+      "eol-server": "2015-04-29"
+    },
+    {
+      "version": "10.10",
+      "codename": "Maverick Meerkat",
+      "series": "maverick",
+      "created": "2010-04-29",
+      "release": "2010-10-10",
+      "eol": "2012-04-10"
+    },
+    {
+      "version": "11.04",
+      "codename": "Natty Narwhal",
+      "series": "natty",
+      "created": "2010-10-10",
+      "release": "2011-04-28",
+      "eol": "2012-10-28"
+    },
+    {
+      "version": "11.10",
+      "codename": "Oneiric Ocelot",
+      "series": "oneiric",
+      "created": "2011-04-28",
+      "release": "2011-10-13",
+      "eol": "2013-05-09"
+    },
+    {
+      "version": "12.04 LTS",
+      "codename": "Precise Pangolin",
+      "series": "precise",
+      "created": "2011-10-13",
+      "release": "2012-04-26",
+      "eol": "2017-04-26"
+    },
+    {
+      "version": "12.10",
+      "codename": "Quantal Quetzal",
+      "series": "quantal",
+      "created": "2012-04-26",
+      "release": "2012-10-18",
+      "eol": "2014-05-16"
+    },
+    {
+      "version": "13.04",
+      "codename": "Raring Ringtail",
+      "series": "raring",
+      "created": "2012-10-18",
+      "release": "2013-04-25",
+      "eol": "2014-01-27"
+    },
+    {
+      "version": "13.10",
+      "codename": "Saucy Salamander",
+      "series": "saucy",
+      "created": "2013-04-25",
+      "release": "2013-10-17",
+      "eol": "2014-07-17"
+    },
+    {
+      "version": "14.04 LTS",
+      "codename": "Trusty Tahr",
+      "series": "trusty",
+      "created": "2013-10-17",
+      "release": "2014-04-17",
+      "eol": "2019-04-25"
+    },
+    {
+      "version": "14.10",
+      "codename": "Utopic Unicorn",
+      "series": "utopic",
+      "created": "2014-04-17",
+      "release": "2014-10-23",
+      "eol": "2015-07-23"
+    },
+    {
+      "version": "15.04",
+      "codename": "Vivid Vervet",
+      "series": "vivid",
+      "created": "2014-10-23",
+      "release": "2015-04-23",
+      "eol": "2016-01-23"
+    },
+    {
+      "version": "15.10",
+      "codename": "Wily Werewolf",
+      "series": "wily",
+      "created": "2015-04-23",
+      "release": "2015-10-22",
+      "eol": "2016-07-22"
+    },
+    {
+      "version": "16.04 LTS",
+      "codename": "Xenial Xerus",
+      "series": "xenial",
+      "created": "2015-10-22",
+      "release": "2016-04-21",
+      "eol": "2021-04-21"
+    },
+    {
+      "version": "16.10",
+      "codename": "Yakkety Yak",
+      "series": "yakkety",
+      "created": "2016-04-21",
+      "release": "2016-10-13",
+      "eol": "2017-07-20"
+    },
+    {
+      "version": "17.04",
+      "codename": "Zesty Zapus",
+      "series": "zesty",
+      "created": "2016-10-13",
+      "release": "2017-04-13",
+      "eol": "2018-01-13"
+    },
+    {
+      "version": "17.10",
+      "codename": "Artful Aardvark",
+      "series": "artful",
+      "created": "2017-04-13",
+      "release": "2017-10-19",
+      "eol": "2018-07-19"
+    },
+    {
+      "version": "18.04 LTS",
+      "codename": "Bionic Beaver",
+      "series": "bionic",
+      "created": "2017-10-19",
+      "release": "2018-04-26",
+      "eol": "2023-04-26"
+    },
+    {
+      "version": "18.10",
+      "codename": "Cosmic Cuttlefish",
+      "series": "cosmic",
+      "created": "2018-04-26",
+      "release": "2018-10-18",
+      "eol": "2019-07-18"
+    },
+    {
+      "version": "19.04",
+      "codename": "Disco Dingo",
+      "series": "disco",
+      "created": "2018-10-18",
+      "release": "2019-04-18",
+      "eol": "2020-01-18"
+    },
+    {
+      "version": "19.10",
+      "codename": "Eoan Ermine",
+      "series": "eoan",
+      "created": "2019-04-18",
+      "release": "2019-10-17",
+      "eol": "2020-07-17"
+    },
+    {
+      "version": "20.04 LTS",
+      "codename": "Focal Fossa",
+      "series": "focal",
+      "created": "2019-10-17",
+      "release": "2020-04-23",
+      "eol": "2025-04-23"
+    },
+    {
+      "version": "20.10",
+      "codename": "Groovy Gorilla",
+      "series": "groovy",
+      "created": "2020-04-23",
+      "release": "2020-10-22",
+      "eol": "2021-07-22"
+    }
+  ],
+  "url": "https://salsa.debian.org/debian/distro-info-data/-/blob/master/ubuntu.csv",
+  "date": "2020-04-24T15:26:11Z"
+}
