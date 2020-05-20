@@ -167,8 +167,32 @@
       "Release": "April 23, 2020",
       "End of Standard Support": "April 2025",
       "End of Life": "TBA"
+    },
+    {
+      "Version": "Ubuntu 21.10",
+      "Code name": "II",
+      "Docs": "Release Notes",
+      "Release": "October 14, 2021",
+      "End of Standard Support": "July 2022",
+      "End of Life": "July 2022"
+    },
+    {
+      "Version": "Ubuntu 21.04",
+      "Code name": "HH",
+      "Docs": "Release Notes",
+      "Release": "April 22, 2021",
+      "End of Standard Support": "January 2022",
+      "End of Life": "January 2022"
+    },
+    {
+      "Version": "Ubuntu 20.10",
+      "Code name": "Groovy Gorilla",
+      "Docs": "Release Notes",
+      "Release": "October 22, 2020",
+      "End of Standard Support": "July 2021",
+      "End of Life": "July 2021"
     }
   ],
   "url": "https://wiki.ubuntu.com/Releases",
-  "date": "2020-04-26"
+  "date": "2020-05-19"
 }
