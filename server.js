@@ -130,7 +130,14 @@ Promise.all([
       if(index < 0)
         indexJson.push(lifecycle)
       else
-        Object.assign(indexJson[index], lifecycle)
+      {
+        const oldLifecycle = indexJson[index]
+        const eol = lifecycle.eol.length < oldLifecycle.eol.length
+                  ? oldLifecycle.eol
+                  : lifecycle.eol
+
+        Object.assign(oldLifecycle, lifecycle, {eol})
+      }
     }
 
     if(gt(version, acum)) acum = version
