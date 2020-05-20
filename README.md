@@ -8,6 +8,7 @@ Operating System support lifecycle
 
 - [Carnegie Mellon](https://computing.cs.cmu.edu/desktop/os-lifecycle.html)
 - [Ubuntu releases](https://wiki.ubuntu.com/Releases)
+- [Ubuntu `distro-info-data`](https://salsa.debian.org/debian/distro-info-data)
 
 ## API
 
@@ -25,5 +26,13 @@ object with the next entries:
   released one
 - Operating systems entries for each one
 
-Each operating system entry is a plain object with the fields `eol`, `name`,
-`release` and `version`, and when possible `codename` and `lts` fields too.
+Each operating system entry is a plain object with some or all the fields:
+
+- `codename`
+- `created`
+- `eol`
+- `lts`
+- `name`
+- `release`
+- `series`
+- `version`
