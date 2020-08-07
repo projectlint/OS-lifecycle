@@ -574,5 +574,13 @@
     "name": "Ubuntu",
     "release": "2021-04-22",
     "version": "21.04"
+  },
+  {
+    "codename": "Focal Fossa",
+    "eol": "2025-04",
+    "lts": true,
+    "name": "Ubuntu",
+    "release": "2020-08-06",
+    "version": "20.04.1"
   }
 ]
