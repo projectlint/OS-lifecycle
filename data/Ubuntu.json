@@ -191,8 +191,16 @@
       "Release": "October 22, 2020",
       "End of Standard Support": "July 2021",
       "End of Life": "July 2021"
+    },
+    {
+      "Version": "Ubuntu 20.04.1 LTS",
+      "Code name": "Focal Fossa",
+      "Docs": "Changes",
+      "Release": "August 6, 2020",
+      "End of Standard Support": "April 2025",
+      "End of Life": "TBA"
     }
   ],
   "url": "https://wiki.ubuntu.com/Releases",
-  "date": "2020-07-20"
+  "date": "2020-08-06"
 }
