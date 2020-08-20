@@ -199,8 +199,24 @@
       "Release": "August 6, 2020",
       "End of Standard Support": "April 2025",
       "End of Life": "TBA"
+    },
+    {
+      "Version": "Ubuntu 18.04.5 LTS",
+      "Code name": "Bionic Beaver",
+      "Docs": "Changes",
+      "Release": "August 13, 2020",
+      "End of Standard Support": "April 2023",
+      "End of Life": "April 2028"
+    },
+    {
+      "Version": "Ubuntu 16.04.7 LTS",
+      "Code name": "Xenial Xerus",
+      "Docs": "Changes",
+      "Release": "August 13, 2020",
+      "End of Standard Support": "April 2021",
+      "End of Life": "April 2024"
     }
   ],
   "url": "https://wiki.ubuntu.com/Releases",
-  "date": "2020-08-06"
+  "date": "2020-08-19"
 }

@@ -582,5 +582,21 @@
     "name": "Ubuntu",
     "release": "2020-08-06",
     "version": "20.04.1"
+  },
+  {
+    "codename": "Bionic Beaver",
+    "eol": "2023-04",
+    "lts": true,
+    "name": "Ubuntu",
+    "release": "2020-08-13",
+    "version": "18.04.5"
+  },
+  {
+    "codename": "Xenial Xerus",
+    "eol": "2021-04",
+    "lts": true,
+    "name": "Ubuntu",
+    "release": "2020-08-13",
+    "version": "16.04.7"
   }
 ]
