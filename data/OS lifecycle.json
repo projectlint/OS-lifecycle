@@ -164,7 +164,7 @@
       "OS Family": "Ubuntu Linux",
       "Operating System": "Ubuntu 16.04 LTS\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"Xenial Xerus\"",
       "Latest Update or Service Pack": "16.04",
-      "SCS Support Status": "Active",
+      "SCS Support Status": "Phasing Out",
       "Vendor Release Date": "21 Apr 2016",
       "Start of SCS Support": "1 Feb 2017",
       "End of SCS Support": "Apr 2021",
@@ -234,13 +234,23 @@
       "OS Family": "Clusters",
       "Operating System": "CentOS 6",
       "Latest Update or Service Pack": "6",
-      "SCS Support Status": "Active",
+      "SCS Support Status": "Phasing Out",
       "Vendor Release Date": "12 Jul 2011",
       "Start of SCS Support": "Apr 2012",
       "End of SCS Support": "30 Nov 2020",
       "Latest Vendor EOL Date": "30 Nov 2020"
+    },
+    {
+      "OS Family": "Clusters",
+      "Operating System": "CentOS 8",
+      "Latest Update or Service Pack": "8",
+      "SCS Support Status": "Active",
+      "Vendor Release Date": "24 Sep 2020",
+      "Start of SCS Support": "16 Jul 2020",
+      "End of SCS Support": "31 May 2029",
+      "Latest Vendor EOL Date": "31 May 2029"
     }
   ],
   "url": "https://computing.cs.cmu.edu/desktop/os-lifecycle.html",
-  "date": "2020-07-30"
+  "date": "2020-09-25"
 }

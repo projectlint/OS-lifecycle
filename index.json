@@ -598,5 +598,11 @@
     "name": "Ubuntu",
     "release": "2020-08-13",
     "version": "16.04.7"
+  },
+  {
+    "eol": "2029-05-31",
+    "name": "CentOS",
+    "release": "2020-09-24",
+    "version": "8"
   }
 ]
