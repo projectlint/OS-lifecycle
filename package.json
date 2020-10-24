@@ -1,6 +1,6 @@
 {
   "name": "@projectlint/os-lifecycle",
-  "version": "2020.9.25",
+  "version": "2020.10.23",
   "description": "Operating System support lifecycle",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
