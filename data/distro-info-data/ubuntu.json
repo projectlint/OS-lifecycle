@@ -266,8 +266,16 @@
       "created": "2020-04-23",
       "release": "2020-10-22",
       "eol": "2021-07-22"
+    },
+    {
+      "version": "21.04",
+      "codename": "Hirsute Hippo",
+      "series": "hirsute",
+      "created": "2020-10-22",
+      "release": "2021-04-22",
+      "eol": "2022-01-22"
     }
   ],
   "url": "https://salsa.debian.org/debian/distro-info-data/-/blob/master/ubuntu.csv",
-  "date": "2020-04-24T15:26:11Z"
+  "date": "2020-10-29T20:21:02Z"
 }

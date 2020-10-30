@@ -127,7 +127,7 @@
   },
   {
     "codename": "Eoan Ermine",
-    "eol": "2020-07",
+    "eol": "2020-07-17",
     "name": "Ubuntu",
     "release": "2019-10-17",
     "version": "19.10",
@@ -168,7 +168,7 @@
   },
   {
     "codename": "Bionic Beaver",
-    "eol": "2023-04",
+    "eol": "2023-04-26",
     "lts": true,
     "name": "Ubuntu",
     "release": "2018-04-26",
@@ -226,7 +226,7 @@
   },
   {
     "codename": "Xenial Xerus",
-    "eol": "2021-04",
+    "eol": "2021-04-21",
     "lts": true,
     "name": "Ubuntu",
     "release": "2016-04-21",
@@ -284,7 +284,7 @@
   },
   {
     "codename": "Trusty Tahr",
-    "eol": "2019-04",
+    "eol": "2019-04-25",
     "lts": true,
     "name": "Ubuntu",
     "release": "2014-04-17",
@@ -294,7 +294,7 @@
   },
   {
     "codename": "Focal Fossa",
-    "eol": "2025-04",
+    "eol": "2025-04-23",
     "lts": true,
     "name": "Ubuntu",
     "release": "2020-04-23",
@@ -557,7 +557,7 @@
     "series": "groovy",
     "created": "2020-04-23",
     "release": "2020-10-22",
-    "eol": "2021-07",
+    "eol": "2021-07-22",
     "name": "Ubuntu",
     "version": "20.10"
   },
@@ -604,5 +604,14 @@
     "name": "CentOS",
     "release": "2020-09-24",
     "version": "8"
+  },
+  {
+    "codename": "Hirsute Hippo",
+    "series": "hirsute",
+    "created": "2020-10-22",
+    "release": "2021-04-22",
+    "eol": "2022-01-22",
+    "name": "Ubuntu",
+    "version": "21.04"
   }
 ]
