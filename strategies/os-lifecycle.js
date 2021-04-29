@@ -1,3 +1,6 @@
+const {Tabletojson: {convert}} = require('tabletojson')
+
+
 const REGEXP_ARCH = /^([ \S]+?)\s+(\d+)-bit$/
 const REGEXP_CODENAME = /^([ \S]+?)\s+"([ \S]*)"$/
 const REGEXP_RFC_2822_DATE =
@@ -109,9 +112,9 @@ exports.normalize = function(lifecycle)
 
   return {
     codename,
-    eolDate: parseDate(latestVendorEolDate),
+    eol: parseDate(latestVendorEolDate),
     name,
-    releaseDate: parseDate(lifecycle['Vendor Release Date']),
+    release: parseDate(lifecycle['Vendor Release Date']),
     version
   }
 }
@@ -121,7 +124,9 @@ exports.scrapDate = function($)
   return parseDate($('p.sidedate').text().trim().replace(/^As of: /, ''))
 }
 
-exports.scrapTable = function(data)
+exports.scrapTable = function(html)
 {
-  return data[1].slice(1)
+  const options = {useFirstRowForHeadings: true}
+
+  return convert(html, options)[1].slice(1)
 }

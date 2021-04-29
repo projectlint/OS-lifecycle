@@ -1,9 +1,8 @@
 {
   "name": "@projectlint/os-lifecycle",
-  "version": "2020.2.17",
+  "version": "2020.10.29",
   "description": "Operating System support lifecycle",
   "scripts": {
-    "prepare": "npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +17,7 @@
   "homepage": "https://github.com/projectlint/OS-lifecycle#readme",
   "devDependencies": {
     "cheerio": "^1.0.0-rc.6",
+    "csv-parse": "^4.9.0",
     "pagetojson": "0.0.8",
     "semver": "^7.3.5",
     "tabletojson": "^2.0.6"

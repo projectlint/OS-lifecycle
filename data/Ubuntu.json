@@ -5,8 +5,8 @@
       "Code name": "Eoan Ermine",
       "Docs": "Release Notes",
       "Release": "October 17, 2019",
-      "End of Standard Support": "July, 2020",
-      "End of Life": "July, 2020"
+      "End of Standard Support": "July 2020",
+      "End of Life": "July 2020"
     },
     {
       "Version": "Ubuntu 18.04.4 LTS",
@@ -159,8 +159,64 @@
       "Release": "April 17, 2014",
       "End of Standard Support": "April 2019",
       "End of Life": "April 2022"
+    },
+    {
+      "Version": "Ubuntu 20.04 LTS",
+      "Code name": "Focal Fossa",
+      "Docs": "Release Notes",
+      "Release": "April 23, 2020",
+      "End of Standard Support": "April 2025",
+      "End of Life": "TBA"
+    },
+    {
+      "Version": "Ubuntu 21.10",
+      "Code name": "II",
+      "Docs": "Release Notes",
+      "Release": "October 14, 2021",
+      "End of Standard Support": "July 2022",
+      "End of Life": "July 2022"
+    },
+    {
+      "Version": "Ubuntu 21.04",
+      "Code name": "HH",
+      "Docs": "Release Notes",
+      "Release": "April 22, 2021",
+      "End of Standard Support": "January 2022",
+      "End of Life": "January 2022"
+    },
+    {
+      "Version": "Ubuntu 20.10",
+      "Code name": "Groovy Gorilla",
+      "Docs": "Release Notes",
+      "Release": "October 22, 2020",
+      "End of Standard Support": "July 2021",
+      "End of Life": "July 2021"
+    },
+    {
+      "Version": "Ubuntu 20.04.1 LTS",
+      "Code name": "Focal Fossa",
+      "Docs": "Changes",
+      "Release": "August 6, 2020",
+      "End of Standard Support": "April 2025",
+      "End of Life": "TBA"
+    },
+    {
+      "Version": "Ubuntu 18.04.5 LTS",
+      "Code name": "Bionic Beaver",
+      "Docs": "Changes",
+      "Release": "August 13, 2020",
+      "End of Standard Support": "April 2023",
+      "End of Life": "April 2028"
+    },
+    {
+      "Version": "Ubuntu 16.04.7 LTS",
+      "Code name": "Xenial Xerus",
+      "Docs": "Changes",
+      "Release": "August 13, 2020",
+      "End of Standard Support": "April 2021",
+      "End of Life": "April 2024"
     }
   ],
   "url": "https://wiki.ubuntu.com/Releases",
-  "date": "2020-02-17"
+  "date": "2020-10-28"
 }

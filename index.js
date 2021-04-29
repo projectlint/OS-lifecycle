@@ -5,7 +5,7 @@ function applyCodename(obj, lifecycle)
 {
   const {codename} = lifecycle
   if(codename
-  && (!obj[codename] || obj[codename].releaseDate < lifecycle.releaseDate))
+  && (!obj[codename] || obj[codename].release < lifecycle.release))
     obj[codename] = lifecycle
 
   return obj
@@ -30,7 +30,7 @@ function generateConstants(all)
     || (osFamilyName === 'Ubuntu'
         && family.newest.version.substr(0, 5) < lifecycle.version.substr(0, 5))
     || (osFamilyName !== 'Ubuntu'
-        && family.newest.releaseDate < lifecycle.releaseDate))
+        && family.newest.release < lifecycle.release))
       family.newest = lifecycle
   }
 
@@ -47,9 +47,9 @@ function generateConstants(all)
   return result
 }
 
-function filterMaintained(lifecycle)
+function filterMaintained({eol, release})
 {
-  return lifecycle.releaseDate < this && this < lifecycle.eolDate
+  return new Date(release) < this && this < new Date(eol)
 }
 
 

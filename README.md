@@ -1,17 +1,22 @@
 # OS-lifecycle
+
 Operating System support lifecycle
+
+![CI](https://github.com/projectlint/OS-lifecycle/workflows/CI/badge.svg)
 
 ## Data sources
 
-- https://computing.cs.cmu.edu/desktop/os-lifecycle.html
+- [Carnegie Mellon](https://computing.cs.cmu.edu/desktop/os-lifecycle.html)
+- [Ubuntu releases](https://wiki.ubuntu.com/Releases)
+- [Ubuntu `distro-info-data`](https://salsa.debian.org/debian/distro-info-data)
 
 ## API
 
 Module export a function with a single `now` optional argument to ask for the
 maintained operating systems in a specified date (current date by default),
-inspired by https://github.com/pkgjs/nv. The module also return by default the
-data for all the registered operating systems versions. Raw-ish data can be get
-in the `index.json` file.
+inspired by [@pkgjs/nv](https://github.com/pkgjs/nv). The module also return by
+default the data for all the registered operating systems versions. Raw-ish
+data can be get in the `index.json` file.
 
 Returned data format (both for function calls or exported by default) is an
 object with the next entries:
@@ -21,7 +26,13 @@ object with the next entries:
   released one
 - Operating systems entries for each one
 
-Each operating system entry is a plain object with the fields `OS Family`,
-`Operating System`, `Latest Update or Service Pack`, `SCS Support Status`,
-`Vendor Release Date`, `Start of SCS Support`, `End of SCS Support` and
-`Latest Vendor EOL Date`, and when possible `codename` and `bits` fields too.
+Each operating system entry is a plain object with some or all the fields:
+
+- `codename`
+- `created`
+- `eol`
+- `lts`
+- `name`
+- `release`
+- `series`
+- `version`

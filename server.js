@@ -5,7 +5,7 @@ const {join} = require('path')
 
 const {load} = require('cheerio')
 const {AbstractToJson: {fetchUrl}} = require('pagetojson')
-const {gt, lte} = require('semver')
+const {gt, inc, lte} = require('semver')
 const {Tabletojson: {convert}} = require('tabletojson')
 
 const package = require('./package.json')
@@ -35,25 +35,29 @@ function scrap({url, name, idField, scrapDate, scrapTable})
 
     if(data.date && lte(version, date2version(data.date))) return
 
-    const options = {useFirstRowForHeadings: true}
-
-    for(const tableData of scrapTable(convert(html, options)))
+    return Promise.resolve(scrapTable(html))
+    .then(function(table)
     {
-      const index = data.data.findIndex(function(item)
+      function findRow(item)
       {
-        return item[idField] === tableData[idField]
-      })
+        return item[idField] === this[idField]
+      }
 
-      if(index < 0)
-        data.data.push(tableData)
-      else
-        Object.assign(data.data[index], tableData)
-    }
+      for(const row of table)
+      {
+        const index = data.data.findIndex(findRow, row)
 
-    data.url = url
-    data.date = date
+        if(index < 0)
+          data.data.push(row)
+        else
+          Object.assign(data.data[index], row)
+      }
 
-    return writeFile(filePath, JSON.stringify(data, null, 2))
+      data.url = url
+      data.date = date
+
+      return writeJsonFile(filePath, data)
+    })
     .then(function()
     {
       data.version = version
@@ -77,10 +81,17 @@ function onReadIndexFailure(error)
   return []
 }
 
+function writeJsonFile(filePath, data)
+{
+  return writeFile(filePath, JSON.stringify(data, null, 2))
+}
+
 
 const strategies =
 [
   require('./strategies/os-lifecycle'),
+  require('./strategies/distro-info-data/debian'),
+  require('./strategies/distro-info-data/ubuntu'),
   require('./strategies/Ubuntu'),
   // require('./strategies/Windows')
 ]
@@ -101,35 +112,53 @@ Promise.all([
       return lifecycle['OS Family'] !== 'Ubuntu Linux'
     })
 
-  const version = results.reduce(function(acum, result, index)
+  const oldVersion = package.version
+
+  let version = results.reduce(function(acum, result, index)
   {
-    if(result)
+    if(!result) return acum
+
+    const {data, version} = result
+
+    for(const lifecycle of data.map(strategies[index].normalize))
     {
-      const {data, version} = result
-
-      for(const lifecycle of data.map(strategies[index].normalize))
+      const index = indexJson.findIndex(function({codename, name, version})
       {
-        const index = indexJson.findIndex(function({name, version})
-        {
-          return name === lifecycle.name && version === lifecycle.version
-        })
+        return name === lifecycle.name && codename === lifecycle.codename
+            && version === lifecycle.version
+      })
 
-        if(index < 0)
-          indexJson.push(lifecycle)
-        else
-          Object.assign(indexJson[index], lifecycle)
+      if(index < 0)
+        indexJson.push(lifecycle)
+      else
+      {
+        const oldLifecycle = indexJson[index]
+        const eol = lifecycle.eol.length < oldLifecycle.eol.length
+                  ? oldLifecycle.eol
+                  : lifecycle.eol
+
+        Object.assign(oldLifecycle, lifecycle, {eol})
       }
-
-      if(gt(version, acum)) acum = version
     }
 
-    return acum
-  }, package.version)
+    if(gt(version, acum)) acum = version
 
-  package.version = version
+    return acum
+  }, oldVersion)
+
+  function writePackageJson()
+  {
+    if(lte(version, oldVersion)) version = inc(oldVersion, 'prerelease')
+
+    if(process.argv[2] === '--print') process.stdout.write(version)
+
+    package.version = version
+
+    return writeJsonFile('package.json', package)
+  }
 
   return Promise.all([
-    writeFile('index.json', JSON.stringify(indexJson, null, 2)),
-    writeFile('package.json', JSON.stringify(package, null, 2))
+    writeJsonFile('index.json', indexJson),
+    writePackageJson()
   ])
 })

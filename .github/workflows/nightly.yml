@@ -6,7 +6,7 @@ on:
   - cron: "0 0 * * *"
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,26 +14,32 @@ jobs:
 
     - run: npm install
 
-    - uses: stefanzweifel/git-auto-commit-action@v2.5.0
+    - run: echo "::set-output name=version::`./server.js --print --unhandled-rejections=strict`"
+      id: update
+
+    - uses: stefanzweifel/git-auto-commit-action@v4.1.6
+      if: steps.update.outputs.version != ''
+      id: "auto-commit-action"
       with:
-        commit_message: Update data
         branch: master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        commit_message: ${{steps.update.outputs.version}}
+        tagging_message: ${{steps.update.outputs.version}}
 
     - uses: actions/setup-node@v1
+      if: steps.auto-commit-action.outputs.changes_detected == 'true'
       with:
         registry-url: https://registry.npmjs.org/
-    - run: npm ci
     - run: npm publish
+      if: steps.auto-commit-action.outputs.changes_detected == 'true'
       env:
         NODE_AUTH_TOKEN: ${{secrets.npm_token}}
 
     - uses: actions/setup-node@v1
+      if: steps.auto-commit-action.outputs.changes_detected == 'true'
       with:
         registry-url: https://npm.pkg.github.com/
         scope: '@projectlint'
-    - run: npm ci
     - run: npm publish
+      if: steps.auto-commit-action.outputs.changes_detected == 'true'
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
