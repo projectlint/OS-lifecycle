@@ -6,7 +6,7 @@ const {join} = require('path')
 const {load} = require('cheerio')
 const {AbstractToJson: {fetchUrl}} = require('pagetojson')
 const {gt, lte} = require('semver')
-const {convert} = require('tabletojson')
+const {Tabletojson: {convert}} = require('tabletojson')
 
 const package = require('./package.json')
 
