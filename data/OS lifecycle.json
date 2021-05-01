@@ -94,17 +94,17 @@
       "OS Family": "OS X / macOS",
       "Operating System": "macOS Catalina\n\t\t\t\t\t\t\t\t\t\t\t\t \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tupgrade note",
       "Latest Update or Service Pack": "10.15",
-      "SCS Support Status": "Active (Default)",
+      "SCS Support Status": "Active",
       "Vendor Release Date": "7 Oct 2019",
       "Start of SCS Support": "16 Dec 2019",
       "End of SCS Support": "TBD",
-      "Latest Vendor EOL Date": "Nov 2022"
+      "Latest Vendor EOL Date": "~ 2022\n\t\t\t\t\t\tsee note"
     },
     {
       "OS Family": "OS X / macOS",
       "Operating System": "macOS Mojave\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tupgrade note",
       "Latest Update or Service Pack": "10.14",
-      "SCS Support Status": "Active",
+      "SCS Support Status": "Containment",
       "Vendor Release Date": "24 Sep 2018",
       "Start of SCS Support": "3 Dec 2018",
       "End of SCS Support": "Nov 2021",
@@ -154,7 +154,7 @@
       "OS Family": "Ubuntu Linux",
       "Operating System": "Ubuntu 18.04 LTS\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"Bionic Beaver\"",
       "Latest Update or Service Pack": "18.04",
-      "SCS Support Status": "Active (Default)",
+      "SCS Support Status": "Active",
       "Vendor Release Date": "26 Apr 2018",
       "Start of SCS Support": "18 Dec 2018",
       "End of SCS Support": "Apr 2023",
@@ -249,8 +249,58 @@
       "Start of SCS Support": "16 Jul 2020",
       "End of SCS Support": "31 May 2029",
       "Latest Vendor EOL Date": "31 May 2029"
+    },
+    {
+      "OS Family": "Windows Desktop",
+      "Operating System": "Windows 10\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSemi-Annual Channel",
+      "Latest Update or Service Pack": "2004",
+      "SCS Support Status": "Testing",
+      "Vendor Release Date": "27 May 2020",
+      "Start of SCS Support": "TBD",
+      "End of SCS Support": "14 Dec 2021",
+      "Latest Vendor EOL Date": "14 Dec 2021"
+    },
+    {
+      "OS Family": "Windows Desktop",
+      "Operating System": "Windows 10\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSemi-Annual Channel",
+      "Latest Update or Service Pack": "1809",
+      "SCS Support Status": "Active (Default)",
+      "Vendor Release Date": "28 Mar 2019",
+      "Start of SCS Support": "1 Apr 2019",
+      "End of SCS Support": "11 May 2021",
+      "Latest Vendor EOL Date": "11 May 2021"
+    },
+    {
+      "OS Family": "OS X / macOS",
+      "Operating System": "macOS Big Sur\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tupgrade note",
+      "Latest Update or Service Pack": "11.0",
+      "SCS Support Status": "Active (Default)",
+      "Vendor Release Date": "Nov 2020",
+      "Start of SCS Support": "11 Dec 2020",
+      "End of SCS Support": "Nov 2023",
+      "Latest Vendor EOL Date": "~ 2023\n\t\t\t\t\t\tsee note"
+    },
+    {
+      "OS Family": "OS X / macOS",
+      "Operating System": "macOS High Sierra",
+      "Latest Update or Service Pack": "10.13",
+      "SCS Support Status": "Phasing Out",
+      "Vendor Release Date": "25 Sep 2017",
+      "Start of SCS Support": "5 Mar 2018",
+      "End of SCS Support": "Dec 2020",
+      "Latest Vendor EOL Date": "~2020\n\t\t\t\t\t\tsee note"
+    },
+    {
+      "OS Family": "Ubuntu Linux",
+      "Operating System": "Ubuntu 20.04 LTS\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"Focal Fossa\"",
+      "Latest Update or Service Pack": "20.04",
+      "SCS Support Status": "Active (Default)",
+      "Vendor Release Date": "Apr 2020",
+      "Start of SCS Support": "Jan 2021",
+      "End of SCS Support": "Apr 2025",
+      "Latest Vendor EOL Date": "Apr 2025"
     }
   ],
   "url": "https://computing.cs.cmu.edu/desktop/os-lifecycle.html",
-  "date": "2020-09-25"
+  "date": "2021-01-28"
 }

@@ -1,8 +1,8 @@
 [
   {
-    "eol": "2025-10-14",
+    "eol": "2021-05-11",
     "name": "Windows",
-    "release": "2015-07-29",
+    "release": "2019-03-28",
     "version": "10.1809"
   },
   {
@@ -613,5 +613,18 @@
     "eol": "2022-01-22",
     "name": "Ubuntu",
     "version": "21.04"
+  },
+  {
+    "codename": "Big Sur",
+    "eol": "2023",
+    "name": "macOS",
+    "release": "2020-11",
+    "version": "11.0"
+  },
+  {
+    "eol": "2021-12-14",
+    "name": "Windows",
+    "release": "2020-05-27",
+    "version": "10.2004"
   }
 ]

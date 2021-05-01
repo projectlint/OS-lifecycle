@@ -22,42 +22,42 @@ function date2version(value)
 
 function scrap({url, name, idField, scrapDate, scrapTable})
 {
+  if(!Array.isArray(idField)) idField = [idField]
+
+  function findRow(item)
+  {
+    return idField.every(idField => item[idField] === this[idField])
+  }
+
   const filePath = join(__dirname, 'data', `${name}.json`)
 
   return Promise.all([
     fetchUrl(url),
     readFile(filePath).then(JSON.parse, onReadDataFailure)
   ])
-  .then(function([html, data])
+  .then(async function([html, data])
   {
     const date = scrapDate(load(html))
     const version = date2version(date)
 
     if(data.date && lte(version, date2version(data.date))) return
 
-    return Promise.resolve(scrapTable(html))
-    .then(function(table)
+    const table = await scrapTable(html)
+
+    for(const row of table)
     {
-      function findRow(item)
-      {
-        return item[idField] === this[idField]
-      }
+      const index = data.data.findIndex(findRow, row)
 
-      for(const row of table)
-      {
-        const index = data.data.findIndex(findRow, row)
+      if(index < 0)
+        data.data.push(row)
+      else
+        Object.assign(data.data[index], row)
+    }
 
-        if(index < 0)
-          data.data.push(row)
-        else
-          Object.assign(data.data[index], row)
-      }
+    data.url = url
+    data.date = date
 
-      data.url = url
-      data.date = date
-
-      return writeJsonFile(filePath, data)
-    })
+    return writeJsonFile(filePath, data)
     .then(function()
     {
       data.version = version

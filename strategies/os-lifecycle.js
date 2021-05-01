@@ -39,7 +39,7 @@ function parseDate(date)
 }
 
 
-exports.idField = 'Operating System'
+exports.idField = ['Operating System', 'Latest Update or Service Pack']
 exports.name = 'OS lifecycle'
 exports.url = 'https://computing.cs.cmu.edu/desktop/os-lifecycle.html'
 
