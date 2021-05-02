@@ -3,7 +3,7 @@ const {Tabletojson: {convert}} = require('tabletojson')
 
 
 const REGEXP_DATE =
-  /(?<month>[A-Z][a-z]{2,})(?:\s+(?<day>\d{1,2}))?,?\s+(?<year>\d{4})$/
+  /(?<month>[A-Z][a-z]{2,})\s+(?:(?<day>\d{1,2}),\s+)?(?<year>\d{4})$/
 
 
 function parseDate(date)
