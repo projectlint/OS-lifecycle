@@ -1,3 +1,4 @@
+const {load} = require('cheerio')
 const {Tabletojson: {convert}} = require('tabletojson')
 
 
@@ -119,14 +120,12 @@ exports.normalize = function(lifecycle)
   }
 }
 
-exports.scrapDate = function($)
+exports.scrap = function({body})
 {
-  return parseDate($('p.sidedate').text().trim().replace(/^As of: /, ''))
-}
+  const $ = load(body)
 
-exports.scrapTable = function(html)
-{
-  const options = {useFirstRowForHeadings: true}
-
-  return convert(html, options)[1].slice(1)
+  return {
+    date: parseDate($('p.sidedate').text().trim().replace(/^As of: /, '')),
+    table: convert(body, {useFirstRowForHeadings: true})[1].slice(1)
+  }
 }

@@ -1,8 +1,4 @@
 const parse = require('csv-parse/lib/sync')
-const {AbstractToJson: {fetchUrl}} = require('pagetojson')
-
-
-const url = 'https://salsa.debian.org/debian/distro-info-data/-/blob/master/ubuntu.csv'
 
 
 function parseData(data)
@@ -10,10 +6,17 @@ function parseData(data)
   return parse(data, {columns: true, relax_column_count: true})
 }
 
+function parseDate(date)
+{
+  date = new Date(date)
+
+  return `${date.getUTCFullYear()}-${date.getUTCMonth()}-${date.getUTCDate()}`
+}
+
 
 exports.idField = 'series'
 exports.name = 'distro-info-data/ubuntu'
-exports.url = url
+exports.url = 'https://debian.pages.debian.net/distro-info-data/ubuntu.csv'
 
 exports.normalize = function({version, ...lifecycle})
 {
@@ -23,13 +26,10 @@ exports.normalize = function({version, ...lifecycle})
   return {...lifecycle, lts: lts === 'LTS' || undefined, name: 'Ubuntu', version}
 }
 
-exports.scrapDate = function($)
+exports.scrap = function({body, response: {headers}})
 {
-  return $('time').attr('datetime')
-}
-
-exports.scrapTable = function()
-{
-  return fetchUrl(url.replace('blob', 'raw'))
-  .then(parseData)
+  return {
+    date: parseDate(headers['last-modified']),
+    table: parseData(body)
+  }
 }

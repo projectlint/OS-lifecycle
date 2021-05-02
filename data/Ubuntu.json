@@ -178,7 +178,7 @@
     },
     {
       "Version": "Ubuntu 21.04",
-      "Code name": "HH",
+      "Code name": "Hirsute Hippo",
       "Docs": "Release Notes",
       "Release": "April 22, 2021",
       "End of Standard Support": "January 2022",
@@ -215,8 +215,16 @@
       "Release": "August 13, 2020",
       "End of Standard Support": "April 2021",
       "End of Life": "April 2024"
+    },
+    {
+      "Version": "Ubuntu 20.04.2 LTS",
+      "Code name": "Focal Fossa",
+      "Docs": "Changes",
+      "Release": "February 4, 2021",
+      "End of Standard Support": "April 2025",
+      "End of Life": "TBA"
     }
   ],
   "url": "https://wiki.ubuntu.com/Releases",
-  "date": "2020-10-28"
+  "date": "2021-04-22"
 }

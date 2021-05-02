@@ -1,3 +1,4 @@
+const {load} = require('cheerio')
 const {Tabletojson: {convert}} = require('tabletojson')
 
 
@@ -55,14 +56,12 @@ exports.normalize = function(lifecycle)
   }
 }
 
-exports.scrapDate = function($)
+exports.scrap = function({body})
 {
-  return $('p#pageinfo').text().match(/\d{4}-\d{2}-\d{2}/)[0]
-}
+  const $ = load(body)
 
-exports.scrapTable = function(html)
-{
-  const options = {useFirstRowForHeadings: true}
-
-  return convert(html, options)[1].slice(1)
+  return {
+    date: $('p#pageinfo').text().match(/\d{4}-\d{2}-\d{2}/)[0],
+    table: convert(body, {useFirstRowForHeadings: true})[1].slice(1)
+  }
 }

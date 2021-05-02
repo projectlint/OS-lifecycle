@@ -86,7 +86,8 @@
       "series": "squeeze",
       "created": "2009-02-14",
       "release": "2011-02-06",
-      "eol": "2014-05-31"
+      "eol": "2014-05-31",
+      "eol-lts": "2016-02-29"
     },
     {
       "version": "7",
@@ -94,7 +95,9 @@
       "series": "wheezy",
       "created": "2011-02-06",
       "release": "2013-05-04",
-      "eol": "2016-04-26"
+      "eol": "2016-04-26",
+      "eol-lts": "2018-05-31",
+      "eol-elts": "2020-06-30"
     },
     {
       "version": "8",
@@ -102,7 +105,9 @@
       "series": "jessie",
       "created": "2013-05-04",
       "release": "2015-04-25",
-      "eol": "2018-06-06"
+      "eol": "2018-06-17",
+      "eol-lts": "2020-06-30",
+      "eol-elts": "2022-06-30"
     },
     {
       "version": "9",
@@ -110,14 +115,17 @@
       "series": "stretch",
       "created": "2015-04-25",
       "release": "2017-06-17",
-      "eol": "2020-07-06"
+      "eol": "2020-07-06",
+      "eol-lts": "2022-06-30"
     },
     {
       "version": "10",
       "codename": "Buster",
       "series": "buster",
       "created": "2017-06-17",
-      "release": "2019-07-06"
+      "release": "2019-07-06",
+      "eol": "2022-07-06",
+      "eol-lts": "2024-06-30"
     },
     {
       "version": "11",
@@ -142,8 +150,14 @@
       "codename": "Experimental",
       "series": "experimental",
       "created": "1993-08-16"
+    },
+    {
+      "version": "13",
+      "codename": "Trixie",
+      "series": "trixie",
+      "created": "2023-08-01"
     }
   ],
-  "url": "https://salsa.debian.org/debian/distro-info-data/-/blob/master/debian.csv",
-  "date": "2020-04-24T15:26:46Z"
+  "url": "https://debian.pages.debian.net/distro-info-data/debian.csv",
+  "date": "2021-3-23"
 }

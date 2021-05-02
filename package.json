@@ -1,6 +1,6 @@
 {
   "name": "@projectlint/os-lifecycle",
-  "version": "2021.1.29-0",
+  "version": "2021.4.22",
   "description": "Operating System support lifecycle",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +18,7 @@
   "devDependencies": {
     "cheerio": "^1.0.0-rc.6",
     "csv-parse": "^4.15.4",
-    "pagetojson": "^0.0.8",
+    "request": "^2.88.2",
     "semver": "^7.3.5",
     "tabletojson": "^2.0.6"
   }

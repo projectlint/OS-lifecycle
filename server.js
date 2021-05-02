@@ -3,10 +3,8 @@
 const {readFile, writeFile} = require('fs').promises
 const {join} = require('path')
 
-const {load} = require('cheerio')
-const {AbstractToJson: {fetchUrl}} = require('pagetojson')
+const request = require('request')
 const {gt, inc, lte} = require('semver')
-const {Tabletojson: {convert}} = require('tabletojson')
 
 const package = require('./package.json')
 
@@ -19,8 +17,18 @@ function date2version(value)
   }).join('.')
 }
 
+function fetchUrl(url, options) {
+  return new Promise(function(resolve, reject)
+  {
+    request(url, options, function(error, response, body) {
+      if (error) return reject(error);
 
-function scrap({url, name, idField, scrapDate, scrapTable})
+      resolve({body, response});
+    });
+  });
+}
+
+function scrap({url, name, idField, scrap})
 {
   if(!Array.isArray(idField)) idField = [idField]
 
@@ -35,14 +43,12 @@ function scrap({url, name, idField, scrapDate, scrapTable})
     fetchUrl(url),
     readFile(filePath).then(JSON.parse, onReadDataFailure)
   ])
-  .then(async function([html, data])
+  .then(async function([response, data])
   {
-    const date = scrapDate(load(html))
+    const {date, table} = await scrap(response)
     const version = date2version(date)
 
     if(data.date && lte(version, date2version(data.date))) return
-
-    const table = await scrapTable(html)
 
     for(const row of table)
     {
@@ -97,10 +103,10 @@ const strategies =
 ]
 
 Promise.all([
-  Promise.all(strategies.map(scrap)),
-  readFile('index.json').then(JSON.parse, onReadIndexFailure)
+  readFile('index.json').then(JSON.parse, onReadIndexFailure),
+  ...strategies.map(scrap),
 ])
-.then(function([results, indexJson])
+.then(function([indexJson, ...results])
 {
   if(!results.some(Boolean)) return
 

@@ -39,7 +39,7 @@
       "series": "edgy",
       "created": "2006-06-01",
       "release": "2006-10-26",
-      "eol": "2008-04-25"
+      "eol": "2008-04-26"
     },
     {
       "version": "7.04",
@@ -88,7 +88,7 @@
       "series": "karmic",
       "created": "2009-04-23",
       "release": "2009-10-29",
-      "eol": "2011-04-29"
+      "eol": "2011-04-30"
     },
     {
       "version": "10.04 LTS",
@@ -97,7 +97,7 @@
       "created": "2009-10-29",
       "release": "2010-04-29",
       "eol": "2013-05-09",
-      "eol-server": "2015-04-29"
+      "eol-server": "2015-04-30"
     },
     {
       "version": "10.10",
@@ -129,7 +129,9 @@
       "series": "precise",
       "created": "2011-10-13",
       "release": "2012-04-26",
-      "eol": "2017-04-26"
+      "eol": "2017-04-28",
+      "eol-server": "2017-04-28",
+      "eol-esm": "2019-04-28"
     },
     {
       "version": "12.10",
@@ -161,7 +163,9 @@
       "series": "trusty",
       "created": "2013-10-17",
       "release": "2014-04-17",
-      "eol": "2019-04-25"
+      "eol": "2019-04-25",
+      "eol-server": "2019-04-25",
+      "eol-esm": "2022-04-25"
     },
     {
       "version": "14.10",
@@ -177,7 +181,7 @@
       "series": "vivid",
       "created": "2014-10-23",
       "release": "2015-04-23",
-      "eol": "2016-01-23"
+      "eol": "2016-02-04"
     },
     {
       "version": "15.10",
@@ -185,7 +189,7 @@
       "series": "wily",
       "created": "2015-04-23",
       "release": "2015-10-22",
-      "eol": "2016-07-22"
+      "eol": "2016-07-28"
     },
     {
       "version": "16.04 LTS",
@@ -193,7 +197,9 @@
       "series": "xenial",
       "created": "2015-10-22",
       "release": "2016-04-21",
-      "eol": "2021-04-21"
+      "eol": "2021-04-21",
+      "eol-server": "2021-04-21",
+      "eol-esm": "2024-04-21"
     },
     {
       "version": "16.10",
@@ -225,7 +231,9 @@
       "series": "bionic",
       "created": "2017-10-19",
       "release": "2018-04-26",
-      "eol": "2023-04-26"
+      "eol": "2023-04-26",
+      "eol-server": "2023-04-26",
+      "eol-esm": "2028-04-26"
     },
     {
       "version": "18.10",
@@ -241,7 +249,7 @@
       "series": "disco",
       "created": "2018-10-18",
       "release": "2019-04-18",
-      "eol": "2020-01-18"
+      "eol": "2020-01-23"
     },
     {
       "version": "19.10",
@@ -257,7 +265,9 @@
       "series": "focal",
       "created": "2019-10-17",
       "release": "2020-04-23",
-      "eol": "2025-04-23"
+      "eol": "2025-04-23",
+      "eol-server": "2025-04-23",
+      "eol-esm": "2030-04-23"
     },
     {
       "version": "20.10",
@@ -274,8 +284,16 @@
       "created": "2020-10-22",
       "release": "2021-04-22",
       "eol": "2022-01-22"
+    },
+    {
+      "version": "21.10",
+      "codename": "Impish Indri",
+      "series": "impish",
+      "created": "2021-04-22",
+      "release": "2021-10-14",
+      "eol": "2022-07-14"
     }
   ],
-  "url": "https://salsa.debian.org/debian/distro-info-data/-/blob/master/ubuntu.csv",
-  "date": "2020-10-29T20:21:02Z"
+  "url": "https://debian.pages.debian.net/distro-info-data/ubuntu.csv",
+  "date": "2021-3-23"
 }
