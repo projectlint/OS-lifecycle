@@ -9,7 +9,21 @@
     "type": "git",
     "url": "git+https://github.com/projectlint/OS-lifecycle.git"
   },
-  "author": "Jesús Leganés-Combarro 'piranna'",
+  "keywords": [
+    "web",
+    "scrapping",
+    "operating",
+    "system",
+    "release",
+    "LTS",
+    "OSX",
+    "Windows",
+    "Linux",
+    "Ubuntu",
+    "Redhat",
+    "Solaris"
+  ],
+  "author": "Jesús Leganés-Combarro 'piranna' <piranna@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/projectlint/OS-lifecycle/issues"
