@@ -130,8 +130,9 @@ Promise.all([
     {
       const index = indexJson.findIndex(function({codename, name, version})
       {
-        return name === lifecycle.name && codename === lifecycle.codename
-            && version === lifecycle.version
+        return name === lifecycle.name
+        && ((version && version === lifecycle.version)
+          || codename === lifecycle.codename)
       })
 
       if(index < 0)
