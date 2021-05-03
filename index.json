@@ -139,8 +139,8 @@
     "eol": "2023-04",
     "lts": true,
     "name": "Ubuntu",
-    "release": "2020-02-12",
-    "version": "18.04.4"
+    "release": "2020-08-13",
+    "version": "18.04.5"
   },
   {
     "codename": "Bionic Beaver",
@@ -183,8 +183,8 @@
     "eol": "2021-04",
     "lts": true,
     "name": "Ubuntu",
-    "release": "2019-02-28",
-    "version": "16.04.6"
+    "release": "2020-08-13",
+    "version": "16.04.7"
   },
   {
     "codename": "Xenial Xerus",
@@ -243,8 +243,8 @@
     "eol": "2019-04",
     "lts": true,
     "name": "Ubuntu",
-    "release": "2019-03-07",
-    "version": "14.04.6"
+    "release": "2014-04-17",
+    "version": "14.04"
   },
   {
     "codename": "Trusty Tahr",
@@ -303,8 +303,8 @@
     "eol": "2025-04-23",
     "lts": true,
     "name": "Ubuntu",
-    "release": "2020-04-23",
-    "version": "20.04",
+    "release": "2021-02-04",
+    "version": "20.04.2",
     "series": "focal",
     "created": "2019-10-17",
     "eol-server": "2025-04-23",
@@ -579,7 +579,7 @@
     "version": "21.10"
   },
   {
-    "codename": "HH",
+    "codename": "Hirsute Hippo",
     "eol": "2022-01",
     "name": "Ubuntu",
     "release": "2021-04-22",

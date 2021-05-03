@@ -166,7 +166,7 @@
       "Docs": "Release Notes",
       "Release": "April 23, 2020",
       "End of Standard Support": "April 2025",
-      "End of Life": "TBA"
+      "End of Life": "April 2030"
     },
     {
       "Version": "Ubuntu 21.10",
@@ -198,7 +198,7 @@
       "Docs": "Changes",
       "Release": "August 6, 2020",
       "End of Standard Support": "April 2025",
-      "End of Life": "TBA"
+      "End of Life": "April 2030"
     },
     {
       "Version": "Ubuntu 18.04.5 LTS",
@@ -222,9 +222,9 @@
       "Docs": "Changes",
       "Release": "February 4, 2021",
       "End of Standard Support": "April 2025",
-      "End of Life": "TBA"
+      "End of Life": "April 2030"
     }
   ],
   "url": "https://wiki.ubuntu.com/Releases",
-  "date": "2021-04-22"
+  "date": "2021-05-03"
 }
