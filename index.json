@@ -30,10 +30,10 @@
     "version": "XP SP3"
   },
   {
-    "eol": "2027-01-11",
+    "eol": "2015-07-14",
     "name": "Windows Server",
-    "release": "2016-09-26",
-    "version": "2016"
+    "release": "2003-04-24",
+    "version": "2003 R2"
   },
   {
     "eol": "2023-10-10",
@@ -96,10 +96,10 @@
     "version": "10.10"
   },
   {
-    "eol": "2011-12",
+    "eol": "2009-12",
     "name": "Fedora",
-    "release": "2010-11-02",
-    "version": "14"
+    "release": "2008-11-25",
+    "version": "10"
   },
   {
     "eol": "2009-12",
@@ -114,10 +114,10 @@
     "version": "10"
   },
   {
-    "eol": "2024-06-30",
+    "eol": "2029-05-31",
     "name": "CentOS",
-    "release": "2014-06-20",
-    "version": "7"
+    "release": "2020-09-24",
+    "version": "8"
   },
   {
     "eol": "2020-11-30",

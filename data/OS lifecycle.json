@@ -164,7 +164,7 @@
       "OS Family": "Ubuntu Linux",
       "Operating System": "Ubuntu 16.04 LTS\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\"Xenial Xerus\"",
       "Latest Update or Service Pack": "16.04",
-      "SCS Support Status": "Phasing Out",
+      "SCS Support Status": "EOL",
       "Vendor Release Date": "21 Apr 2016",
       "Start of SCS Support": "1 Feb 2017",
       "End of SCS Support": "Apr 2021",
@@ -302,5 +302,5 @@
     }
   ],
   "url": "https://computing.cs.cmu.edu/desktop/os-lifecycle.html",
-  "date": "2021-01-28"
+  "date": "2021-05-05"
 }
