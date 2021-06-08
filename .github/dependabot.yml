@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: csv-parse
+    versions:
+    - 4.15.0
+    - 4.15.1
+    - 4.15.3
+  - dependency-name: cheerio
+    versions:
+    - 1.0.0-rc.5
+  - dependency-name: semver
+    versions:
+    - 7.3.4
