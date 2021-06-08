@@ -54,7 +54,7 @@
       "OS Family": "Windows Server",
       "Operating System": "Windows Server 2016",
       "Latest Update or Service Pack": "",
-      "SCS Support Status": "Active (Default)",
+      "SCS Support Status": "Containment",
       "Vendor Release Date": "26 Sep 2016",
       "Start of SCS Support": "1 Jan 2017",
       "End of SCS Support": "11 Jan 2027",
@@ -104,7 +104,7 @@
       "OS Family": "OS X / macOS",
       "Operating System": "macOS Mojave\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tupgrade note",
       "Latest Update or Service Pack": "10.14",
-      "SCS Support Status": "Containment",
+      "SCS Support Status": "Phasing Out",
       "Vendor Release Date": "24 Sep 2018",
       "Start of SCS Support": "3 Dec 2018",
       "End of SCS Support": "Nov 2021",
@@ -264,7 +264,7 @@
       "OS Family": "Windows Desktop",
       "Operating System": "Windows 10\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSemi-Annual Channel",
       "Latest Update or Service Pack": "1809",
-      "SCS Support Status": "Active (Default)",
+      "SCS Support Status": "Phasing Out",
       "Vendor Release Date": "28 Mar 2019",
       "Start of SCS Support": "1 Apr 2019",
       "End of SCS Support": "11 May 2021",
@@ -284,7 +284,7 @@
       "OS Family": "OS X / macOS",
       "Operating System": "macOS High Sierra",
       "Latest Update or Service Pack": "10.13",
-      "SCS Support Status": "Phasing Out",
+      "SCS Support Status": "EOL",
       "Vendor Release Date": "25 Sep 2017",
       "Start of SCS Support": "5 Mar 2018",
       "End of SCS Support": "Dec 2020",
@@ -299,8 +299,28 @@
       "Start of SCS Support": "Jan 2021",
       "End of SCS Support": "Apr 2025",
       "Latest Vendor EOL Date": "Apr 2025"
+    },
+    {
+      "OS Family": "Windows Desktop",
+      "Operating System": "Windows 10\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tSemi-Annual Channel",
+      "Latest Update or Service Pack": "20H2",
+      "SCS Support Status": "Active (Default)",
+      "Vendor Release Date": "20 Oct 2020",
+      "Start of SCS Support": "9 Jan 2021",
+      "End of SCS Support": "9 May 2023",
+      "Latest Vendor EOL Date": "9 May 2023"
+    },
+    {
+      "OS Family": "Windows Server",
+      "Operating System": "Windows Server 2019",
+      "Latest Update or Service Pack": "",
+      "SCS Support Status": "Active (Default)",
+      "Vendor Release Date": "13 Nov 2018",
+      "Start of SCS Support": "9 Jan 2020",
+      "End of SCS Support": "9 Jan 2029",
+      "Latest Vendor EOL Date": "9 Jan 2029"
     }
   ],
   "url": "https://computing.cs.cmu.edu/desktop/os-lifecycle.html",
-  "date": "2021-05-05"
+  "date": "2021-06-07"
 }
