@@ -31,7 +31,7 @@
   "homepage": "https://github.com/projectlint/OS-lifecycle#readme",
   "devDependencies": {
     "cheerio": "^1.0.0-rc.6",
-    "csv-parse": "^4.15.4",
+    "csv-parse": "^5.0.0",
     "request": "^2.88.2",
     "semver": "^7.3.5",
     "tabletojson": "^2.0.6"
