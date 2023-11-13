@@ -17,7 +17,7 @@ jobs:
     - run: echo "::set-output name=version::`./server.js --print --unhandled-rejections=strict`"
       id: update
 
-    - uses: stefanzweifel/git-auto-commit-action@v4.1.6
+    - uses: stefanzweifel/git-auto-commit-action@v5.0.0
       if: steps.update.outputs.version != ''
       id: "auto-commit-action"
       with:
